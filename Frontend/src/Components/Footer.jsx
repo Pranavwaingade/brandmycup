@@ -10,6 +10,7 @@ const Footer = () => {
                         <a href="" className='info-logo'><img className='logo-img' src={logo} alt="" />
                             <h2 style={{ color: '#8d4a23', fontSize: '40px' }}>Cups</h2> <h2 style={{ color: '#87947b', fontSize: '40px' }}> Craft</h2>
                         </a>
+                        <br />
                         <p>Create custom-branded paper cups for your business. Design, customize, and order premium-quality paper cups with your logo and brand identity.</p>
                     </div>
                 </div>
