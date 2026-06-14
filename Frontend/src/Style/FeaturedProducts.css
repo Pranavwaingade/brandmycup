@@ -1,0 +1,97 @@
+*{
+    background-color: white;
+}
+
+.featured{
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.content{
+    height: 100%;
+    width: 99%;
+    background-color:  rgba(255, 255, 255, 0.597);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    color:#8d4a23 ;
+}
+
+.content p{
+    font-size: large;
+    color: #868686;
+}
+
+
+/* Container to hold the cards in the same spot */
+.slider-container {
+  position: relative;
+  width: 100%; /* Adjust size to fit your needs */
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base style for all cards */
+.card {
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  opacity: 0;
+  animation: slideShow 30s infinite ease-in-out;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; 
+}
+
+/* Staggering the timing so they play one after another */
+.card-1 { animation-delay: 0s; }
+.card-2 { animation-delay: 10s; }
+.card-3 { animation-delay: 20s; }
+
+/* The Keyframe Animation */
+@keyframes slideShow {
+  0% { opacity: 0; transform: translateX(0px); }    /* Starts invisible and shifted right */
+  10% { opacity: 1; transform: translateX(0px); }    /* Fades in to normal position */
+  33% { opacity: 1; transform: translateX(0px); }    /* Stays fully visible */
+  43% { opacity: 0; transform: translateX(0px); }  /* Fades out and slides left */
+  100% { opacity: 0; }                             /* Remains invisible to loop */
+}
+
+.card h1{
+    font-size: xxx-large;
+}
+
+.features p{
+    font-size: xx-large;
+}
+
+.features ul{
+    list-style-type:none ;
+    margin-left: 110px;
+}
+
+.card img{
+
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    left: 36%;
+    z-index: 100;
+}
+
+li{
+    font-size: x-large;
+}
+
+
