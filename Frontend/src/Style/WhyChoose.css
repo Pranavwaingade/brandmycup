@@ -1,0 +1,67 @@
+.whychoose{
+    height: 710px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/bg.webp');
+    background-repeat:round;
+    /* background-size: cover; */
+    /* background-position: center;  */
+
+}
+
+.Feedback{
+    width: 99.5%;
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.655);
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.heading{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    gap: 15px;
+}
+.heading h2{
+    font-size: xxx-large;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.Customerfeed{
+    height: 80%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.feedback-card{
+    height: 35%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    border-radius: 15px;
+}
+
+.inbox{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+   
+}
+
+

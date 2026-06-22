@@ -3,6 +3,7 @@ import '../Style/FeaturedProducts.css'
 import ml150 from '../img/150ml.png'
 import ml250 from '../img/250ml.png'
 import ml350 from '../img/350ml.png'
+import bg from '../img/bg.webp'
 
 
 
@@ -74,7 +75,6 @@ const FeaturedProducts = () => {
           </div>
         </div>
       </div>
-
     </>
   )
 }
