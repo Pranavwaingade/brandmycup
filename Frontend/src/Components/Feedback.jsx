@@ -1,7 +1,6 @@
 import React from 'react'
 import bg from '../img/sideimg.png'
-import '../Style/WhyChoose.css'
-import feedbackbox from './feedbackbox'
+import '../Style/Feedback.css'
 
 const WhyChoose = () => {
 
@@ -10,6 +9,7 @@ const WhyChoose = () => {
         { id: 'fb-102', customer: 'Bob', rating: 4, comment: 'Very good, but shipping took an extra day.' },
         { id: 'fb-103', customer: 'Charlie', rating: 5, comment: 'The product exceeded my expectations.' },
         { id: 'fb-102', customer: 'Bob', rating: 4, comment: 'Very good, but shipping took an extra day.' },
+        { id: 'fb-103', customer: 'Charlie', rating: 5, comment: 'The product exceeded my expectations.' },
         { id: 'fb-103', customer: 'Charlie', rating: 5, comment: 'The product exceeded my expectations.' }
     ];
     return (

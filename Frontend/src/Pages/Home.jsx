@@ -4,7 +4,7 @@ import Hero from '../Components/Hero'
 import Footer from '../Components/Footer'
 import HowItWorks from '../Components/HowItWorks'
 import FeaturedProducts from '../Components/FeaturedProducts'
-import WhyChoose from '../Components/WhyChoose'
+import Feedback from '../Components/Feedback'
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
     <Hero/>
     <HowItWorks/>
     <FeaturedProducts/>
-    <WhyChoose/>
+    <Feedback/>
     <Footer/>
     </>
   )

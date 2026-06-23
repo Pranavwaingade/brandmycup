@@ -38,18 +38,19 @@ img{
     height: 80%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-area: auto;
+    justify-items: center;
+    align-items: center;
 }
-
-
-.feedback-card{
-    height: 35%;
-    width: 20%;
+ .feedback-card{
+    height: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: #8d4a23;
     border-radius: 15px;
 }
 
@@ -62,6 +63,6 @@ img{
     justify-content: center;
     border-radius: 15px;
    
-}
+} 
 
 

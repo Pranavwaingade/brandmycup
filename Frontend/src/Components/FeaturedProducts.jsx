@@ -14,8 +14,8 @@ const FeaturedProducts = () => {
         <div className='content'>
           <h1>Explore Our Custom Paper Cup Collection</h1><br />
           <p>Choose from a variety of premium-quality paper cups designed to showcase your brand and create a memorable customer experience.</p>
-          <div class="slider-container">
-            <div class="card card-1">
+          <div className="slider-container">
+            <div className="card card-1">
               <h1>Small Paper Cup (150ml)</h1> <br />
               <div className='features'>
                 <p style={{color:'black'}}><b>Best For:</b></p>
@@ -34,7 +34,7 @@ const FeaturedProducts = () => {
               </div>
               <img src={ml150} alt="" />
             </div>
-            <div class="card card-2">
+            <div className="card card-2">
               <h1>Medium Paper Cup (250ml)</h1> <br />
               <div className='features'>
                 <p style={{color:'black'}}><b>Best For:</b></p>
@@ -53,7 +53,7 @@ const FeaturedProducts = () => {
               </div>
               <img src={ml250} alt="" style={{width:'50%'}} />
             </div>
-            <div class="card card-3">
+            <div className="card card-3">
               <h1>Large Paper Cup (350ml)</h1> <br />
               <div className='features'>
                 <p style={{color:'black'}}><b>Best For:</b></p>
