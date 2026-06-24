@@ -1,0 +1,24 @@
+.why{
+    height: 150px ;
+    width: 100%;
+    background-color: #8d4a2336;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.Marque{
+    font-size: x-large;
+    background-color: #8d4a2300;
+}
+
+b{
+    background-color: #8d4a2300;
+}
+
+h1{
+    background-color: #8d4a2300;
+}

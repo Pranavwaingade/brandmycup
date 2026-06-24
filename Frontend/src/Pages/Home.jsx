@@ -5,6 +5,7 @@ import Footer from '../Components/Footer'
 import HowItWorks from '../Components/HowItWorks'
 import FeaturedProducts from '../Components/FeaturedProducts'
 import Feedback from '../Components/Feedback'
+import Whychooseme from '../Components/Whychooseme'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
     <Hero/>
     <HowItWorks/>
     <FeaturedProducts/>
+    <Whychooseme/>
     <Feedback/>
     <Footer/>
     </>
