@@ -1,0 +1,100 @@
+
+
+.login-parent{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login-card{
+    width: 60%;
+    height:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: end;
+    background-image: url(../img/Cups\(2\).png);
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+.login-header{
+    width: 50%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.397);
+    text-align: center;
+    align-content: center;
+}
+
+.login-header p{
+    font-size: large;
+    margin-left: 85px;
+    margin-top: 5px;
+}
+
+.login-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.397);
+}
+
+.login-body input{
+    width: 80%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid black ;
+}
+
+.for{
+    height: 55px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.for input{
+    height: 15px;
+    width: 15%;
+    font-size: large;
+}
+
+.for a{
+    width: 60%;
+    text-align: end;
+    font-size: large;
+}
+
+
+.login-body button{
+    width: 30%;
+    height: 45px;
+    font-size: larger;
+    font-weight: 600;
+    align-self: center;
+    border-radius: 10px;
+     background-color: #8d4a23b4;
+     color: white;
+}
+
+.login-body button:hover{
+    border: 1px solid #8d4a23b4;
+    color: #8d4a23b4;
+    background-color: white;
+    
+}
+
+
+
+
+
+
+.login-body a{
+    font-size: large;
+}

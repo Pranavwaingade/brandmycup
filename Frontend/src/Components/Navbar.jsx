@@ -1,9 +1,11 @@
 import React from 'react';
 import "../Style/Navbar.css";
 import mylogo from "../img/Cups(2).png"
+import Login from '../Pages/Login';
 
 
 const Navbar = () => {
+     const isLoggedIn = true ;
     return (
         <nav className='navbar'>
             <a className='logo' href="">
@@ -11,10 +13,20 @@ const Navbar = () => {
                 <h2 style={{ color: '#8d4a23' }}>Cups</h2> <h2 style={{ color: '#87947b' }}> Craft</h2>
             </a>
             <ul className='nav-links'>
+            { !isLoggedIn ? (
+                <>
                 <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/login">Login</a></li>
+                </>
+            ):(
+                <> <li><a href="">Home</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">Customize</a></li>
                 <li><a href="">About</a></li>
+                <li><a href="/login">Profile</a></li>
+                </>
+            )}
             </ul>
 
             <ul className='nav-auth'>
