@@ -1,0 +1,35 @@
+.content{
+    height: 60Px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  
+}
+
+button{
+    height: 45px;
+    width: 100px;
+    font-size: large;
+    border-radius:20px ;
+    color: #8d4a2387;
+    border: none;
+}
+
+button:hover{
+    background-color: #8d4a2387;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: #8d4a2387;
+
+}
+
+a:hover{
+    background-color: #8d4a2387;
+    color: white;
+}

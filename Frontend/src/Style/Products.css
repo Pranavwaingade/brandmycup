@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.herosection{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg.webp);
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+
+.herocontent{
+    width: 99.5%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.537);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.herocontent h1{
+    font-weight: 900;
+    color: white;
+}
+
+.herocontent p{
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 900;
+    color: #9da496;
+}
+
+.mid{
+    height: 890px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 15px;
+}
+
