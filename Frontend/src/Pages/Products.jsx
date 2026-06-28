@@ -24,6 +24,8 @@ const Products = () => {
                     <FilterSidebar />
                     <ProductGrid />
                 </div>
+                <br />
+                <br />
                 <Pagination />
                 <Footer />
             </div>

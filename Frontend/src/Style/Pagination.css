@@ -1,4 +1,4 @@
-.content{
+.Pagination-content{
     height: 60Px;
     width: 100%;
     display: flex;
@@ -23,13 +23,13 @@ button:hover{
     color: white;
 }
 
-a{
+.Pagination-content a{
     text-decoration: none;
     color: #8d4a2387;
 
 }
 
-a:hover{
+.Pagination-content a:hover{
     background-color: #8d4a2387;
     color: white;
 }

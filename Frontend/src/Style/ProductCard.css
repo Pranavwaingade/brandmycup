@@ -1,0 +1,26 @@
+.productcard{
+    min-height:350px;
+    width: 100%;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 1px;
+}
+
+.productimg{
+    height: 70%;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.productdeatilas{
+    width: 85%;
+}
+
+.productdeatilas a{
+    font-size: large;
+}

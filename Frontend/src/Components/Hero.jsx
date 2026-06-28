@@ -14,7 +14,7 @@ function Hero() {
           <br />
           <div className="button">
             <div><a href="">Start Designing</a></div>
-            <div><a href="">View Products</a></div>
+            <div><a href="/products">View Products</a></div>
           </div>
         </div>
         <div className="box3"></div>

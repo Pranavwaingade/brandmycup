@@ -5,7 +5,7 @@ import '../Style/Pagination.css'
 const Pagination = () => {
   return (
     <>
-    <div className="content">
+    <div className="Pagination-content">
       <button>Prious</button>
       <a href="">1</a>
       <a href="">2</a>

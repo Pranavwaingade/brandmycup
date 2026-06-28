@@ -1,6 +1,26 @@
 .filter{
     width: 20%;
-    height: 80%;
-    background-color: #8d4a237e;
+    height: 70%;
+    /* background-color: #8d4a237e; */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 50px;
 }
+
+.innerfilter{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: large;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border-bottom: 2px solid #8d4a237e;
+}
+
+.innerfilter h2{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+

@@ -8,19 +8,19 @@ const Navbar = () => {
     const isLoggedIn = true;
     return (
         <nav className='navbar'>
-            <a className='logo' href="">
+            <a className='logo' href="/">
                 <img className='logo-img' src={mylogo} alt="" />
                 <h2 style={{ color: '#8d4a23' }}>Cups</h2> <h2 style={{ color: '#87947b' }}> Craft</h2>
             </a>
             <ul className='nav-links'>
                 {!isLoggedIn ? (
                     <>
-                        <li><a href="">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="/login">Login</a></li>
                     </>
                 ) : (
-                    <> <li><a href="">Home</a></li>
+                    <> <li><a href="/">Home</a></li>
                         <li><a href="/products">Products</a></li>
                         <li><a href="">Customize</a></li>
                         <li><a href="">About</a></li>

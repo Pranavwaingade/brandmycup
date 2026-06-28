@@ -1,6 +1,9 @@
-
-.productgrid{
+.productgrid {
     width: 75%;
     height: 99%;
-    border: 1px solid black;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
 }
+
