@@ -1,0 +1,36 @@
+.images{
+    height: 480px;
+    width: 650px;
+    /* border: 1px solid black ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.mainimg{
+    height: 99%;
+    width: 80%;
+    /* border: 1px solid black; */
+}
+
+.mainimg img{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.thumbnails{
+    height: 99%;
+    width: 20%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.thumbnails img{
+    height: 22%;
+    width:  100%;
+    border: 1px solid black;
+}

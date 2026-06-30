@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
                     <p>{product.description}</p>
                     <span style={{paddingRight:"40%"}}>{product.size}</span>   <span>⭐{product.rating}</span>
                     <h3 className='price'>₹ {product.price}/ Cup</h3>
-                    <a href="">View Details</a>
+                    <a href="/productdetails">View Details</a>
                 </div>
             </div>
 
