@@ -1,17 +1,17 @@
 .productdetial{
     height: 800px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
 .perticularpro{
     height: 60%;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content:center;
     gap: 50px;

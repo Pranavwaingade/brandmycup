@@ -1,0 +1,9 @@
+.quan{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+button{
+    font-size: xx-large;
+}

@@ -1,8 +1,14 @@
 import React from 'react'
+import '../Style/ProductActions.css'
 
 const ProductActions = () => {
   return (
-    <div>ProductActions</div>
+    <div className='action'>
+      <button>Customize Now</button>
+      <button>Add To Cart</button>
+      <button>Add To Wishlist</button>
+      
+    </div>
   )
 }
 

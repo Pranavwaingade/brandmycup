@@ -1,0 +1,21 @@
+.part{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+
+.size{
+    display: flex;
+    flex-direction: column;
+}
+
+.paperQuality{
+    display: flex;
+    flex-direction: column;
+}
+
+.Shape{
+    display: flex;
+    flex-direction: column;
+}

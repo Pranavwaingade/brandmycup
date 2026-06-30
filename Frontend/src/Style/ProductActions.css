@@ -1,0 +1,9 @@
+.action{
+    display:flex ;
+    justify-content: space-around;
+}
+
+.action button{
+    font-size: small;
+    width: 30%;
+}
