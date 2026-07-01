@@ -11,14 +11,18 @@ const ProductDetails = () => {
   return (
     <>
     <Navbar />
+    
     <div className="productdetial">
         <br />
         <br />
+        <div className="Breadcrumb">Prroduct crumb</div>
         <div className="perticularpro">
             <ProductImage/>
             <ProductInfo/>
         </div>
-        <RelatedProducts/>
+        <div className="productrelated">
+          <RelatedProducts/>
+        </div>
     </div>
 
     <Footer/>

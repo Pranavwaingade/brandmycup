@@ -1,0 +1,6 @@
+.relatedgrid{
+     grid-template-columns:repeat(1fr);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

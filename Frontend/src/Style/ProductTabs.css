@@ -1,0 +1,14 @@
+
+.protab{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.protab a{
+    text-decoration: none;
+    color:#8d4a23;
+}

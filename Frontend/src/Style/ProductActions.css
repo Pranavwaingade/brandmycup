@@ -7,3 +7,12 @@
     font-size: small;
     width: 30%;
 }
+
+.custom{
+    background-color:#8d4a23b4 ;
+    color: white;
+}
+
+.button svg{
+    color: #8d4a23b4;
+}

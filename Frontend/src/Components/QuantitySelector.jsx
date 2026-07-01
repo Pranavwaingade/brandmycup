@@ -19,7 +19,7 @@ const QuantitySelector = () => {
   return (
     <>
     <div className="quan">
-      <h2>Qunatity:<button onClick={handeladd}>+</button>  {count}  <button onClick={handelmins}>-</button></h2>
+      <h2>Qunatity:<button onClick={handeladd}>[+]</button>  {count}  <button onClick={handelmins}>[-]</button></h2>
     </div>
     </>
   )

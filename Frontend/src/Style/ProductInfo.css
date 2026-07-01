@@ -1,6 +1,6 @@
 .productinfo{
     width: 650px;
-    height: 480px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -11,37 +11,38 @@
 .prodeatils{
     width: 70%;
     height: 50%;
-    /* border:  1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: end;
     gap: 5px;
     text-align: end;
-
-    
+    padding-top: 120px;    
 }
 
 .productoptions{
     width: 70%;
-    height: 25%;
-    /* border: 1px solid black; */
+    height: fit-content;
+        padding: 10px;
+
 }
 
 .QunatityItem{
     width: 70%;
-    height: 10%;
-    /* border: 1px solid black; */
+    height: fit-content;
+        padding: 10px;
+
 }
 
 .proaction{
     width: 70%;
-    height: 10%;
-    /* border: 1px solid black; */
+    height: fit-content;
+        padding: 10px;
+
 }
 
 .protab{
-    height: 10%;
+    height: fit-content;
+    padding: 10px;
     width: 70%;
-    border: 1px solid black;
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import Reletedgrid from './Reletedgrid'
 
 const RelatedProducts = () => {
   return (
-    <div>RelatedProducts</div>
+    <div>
+      <Reletedgrid/>
+    </div>
   )
 }
 
