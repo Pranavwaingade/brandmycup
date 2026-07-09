@@ -1,11 +1,9 @@
 import React from "react";
 import "../Style/CupPreview.css";
 import cupImage from "../img/paper-cup.png";
-import logo from '../img/chatgpt.svg'
 
-console.log(logo)
 
-const CupPreview = () => {
+const CupPreview = ({brandname ,brandcolor, tagline,logo}) => {
   return (
     <div className="preview-container">
 
@@ -18,11 +16,11 @@ const CupPreview = () => {
         </div>
 
         <div className="brand-name">
-          Crafted Maker
+         <h2 style={{color:brandcolor}}> {brandname}</h2>
         </div>
 
         <div className="tagline">
-          Your idea manufature YOu
+         <p style={{color:brandcolor}}> {tagline}</p>
         </div>
 
       </div>
