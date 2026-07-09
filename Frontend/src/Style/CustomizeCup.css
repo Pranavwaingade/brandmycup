@@ -1,0 +1,55 @@
+.cupdeisginlayout{
+    padding-top: 85px;
+    width: 100%;
+    height: max-content;
+}
+
+.cupdeisginlayout .heading{
+    display: flex;
+    height: 180px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9a5a35a4;
+}
+
+.heading h2{
+    color: white;
+}
+
+.heading p{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+.layout{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    height: 920px;
+    /* width: 100%; */
+    /* border: 1px solid black; */
+     padding: 20px;
+}
+
+.cuppreview{
+    height: 70%;
+    width: 50%;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    align-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cupoperation{
+    height: 92%;
+    width: 40%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #A5B29A;
+}
+
+

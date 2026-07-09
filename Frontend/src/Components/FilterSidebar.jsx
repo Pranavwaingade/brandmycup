@@ -7,20 +7,21 @@ const FilterSidebar = () => {
       <div className="filter">
         <div className="Catergories innerfilter">
           <h2>Categories</h2>
-          <input type="checkbox" />Tea Cups <br />
-          <input type="checkbox" />Coffe Cups <br />
-          <input type="checkbox" />Juice Cups <br />
-          <input type="checkbox" />Ripple Cupsbr <br />
-          <input type="checkbox" />Double Wall Cups <br />
-          <input type="checkbox" />Ice Cream Cups <br />
+          <input type="checkbox" /> Tea Cups <br />
+          <input type="checkbox" /> Coffe Cups <br />
+          <input type="checkbox" /> Juice Cups <br />
+          <input type="checkbox" /> Ripple Cupsbr <br />
+          <input type="checkbox" /> Double Wall Cups <br />
+          <input type="checkbox" /> Ice Cream Cups <br />
         </div>
-        <div className="size innerfilter">
+        <div className="cupssize innerfilter">
           <h2>Cup Size</h2>
-          <input type="checkbox" />150 ml <br />
-          <input type="checkbox" />250 ml <br />
-          <input type="checkbox" />350 ml <br />
-          <input type="checkbox" />500 ml <br />
+          <input type="checkbox" /> 150 ml<br />
+          <input type="checkbox" /> 250 ml<br />
+          <input type="checkbox" /> 350 ml<br />
+          <input type="checkbox" /> 500 ml<br />
         </div>
+        
         <div className="quality innerfilter">
           <h2>Paper Quality</h2>
           <input type="checkbox" /> Standard     <br />
