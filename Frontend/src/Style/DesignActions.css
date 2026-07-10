@@ -13,7 +13,7 @@
     background-color: white;
 }
 
-a{
+.abutton{
     height: 5%;
     width: 200px;
     text-decoration: none;
@@ -22,6 +22,6 @@ a{
     background-color: #8d4a2300;
 }
 
-a:hover{
+.abutton:hover{
     color: #8d4a23b4;
 }

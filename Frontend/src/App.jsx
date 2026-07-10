@@ -6,6 +6,7 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import Products from "./Pages/Products";
 import ProductDetails from "./Pages/ProductDetails";
 import CustomizeCup from "./Pages/CustomizeCup";
+import Cart from "./Pages/Cart"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/products" element={<Products/>} />
         <Route path="/productdetails" element={<ProductDetails/>} />
         <Route path="/CustomizeCup" element={<CustomizeCup/>} />
+        <Route path="/Cart" element={<Cart/>} />
+        
       </Routes>
     </BrowserRouter>
   );
