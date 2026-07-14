@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
     
     return (
         <>
-            <div className="productcard">
+            <div className="productcard" style={{boxShadow: '0 4px 12px rgba(0, 0, 0, 0.29)'}}>
                 <div className="productimg">
                     <img src={product.img} alt="" />
                 </div>
