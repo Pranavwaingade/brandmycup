@@ -1,14 +1,22 @@
-import React from 'react'
-import '../Style/Searchbar.css'
+import React from "react";
+import "../Style/Searchbar.css";
 
 const Searchbar = () => {
   return (
-    <>
-        <div className="searchbar">
-                    
-        </div>
-    </>
-  )
-}
+    <div className="searchbar">
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search paper cups..."
+          className="search-input"
+        />
 
-export default Searchbar
+        <button className="search-btn">
+          Search
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Searchbar;

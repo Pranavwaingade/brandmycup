@@ -1,33 +1,36 @@
-import React from 'react'
-import '../Style/ProductDetails.css'
-import Navbar from '../Components/Navbar'
-import ProductImage from '../Components/ProductImage'
-import ProductInfo from '../Components/ProductInfo'
-import RelatedProducts from '../Components/RelatedProducts'
-
-import Footer from '../Components/Footer'
+import React from "react";
+import "../Style/ProductDetails.css";
+import Navbar from "../Components/Navbar";
+import ProductImage from "../Components/ProductImage";
+import ProductInfo from "../Components/ProductInfo";
+import RelatedProducts from "../Components/RelatedProducts";
+import Footer from "../Components/Footer";
 
 const ProductDetails = () => {
   return (
     <>
-    <Navbar />
-    
-    <div className="productdetial">
-        <br />
-        <br />
-        <div className="Breadcrumb">Prroduct crumb</div>
-        <div className="perticularpro">
-            <ProductImage/>
-            <ProductInfo/>
-        </div>
-        <div className="productrelated">
-          <RelatedProducts/>
-        </div>
-    </div>
+      <Navbar />
 
-    <Footer/>
+      <div className="productdetails">
+
+        <div className="breadcrumb">
+          Home / Products / Tea Paper Cup
+        </div>
+
+        <div className="product-container">
+          <ProductImage />
+          <ProductInfo />
+        </div>
+
+        <div className="related-section">
+          <RelatedProducts />
+        </div>
+
+      </div>
+
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

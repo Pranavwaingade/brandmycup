@@ -1,20 +1,40 @@
-import React from 'react'
-import '../Style/UploadLogo.css'
+import React, { useState } from "react";
+import "../Style/UploadLogo.css";
 
 const UploadLogo = ({ setlogo }) => {
+
+  const [fileName, setFileName] = useState("");
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      setlogo(URL.createObjectURL(file));
+      setFileName(file.name);
+    }
+  };
+
   return (
-    <div className="upload-wrapper" style={{ paddingBottom: '15px', borderBottom: '2px solid #A5B29A' }}>
-      <input type="file" accept='image/*' onChange={(e) => {
-        const file = e.target.files[0];
-        if (file) {
-          setlogo(URL.createObjectURL(file));
-        }
-      }
-      } id="file-upload" className="custom-file-input" />
+    <div className="upload-wrapper">
+
+      <h3>Upload Brand Logo</h3>
+
+      <input
+        id="file-upload"
+        type="file"
+        accept="image/*"
+        className="custom-file-input"
+        onChange={handleFileChange}
+      />
+
+      {fileName && (
+        <p className="file-name">
+          Selected: {fileName}
+        </p>
+      )}
+
     </div>
+  );
+};
 
-
-  )
-}
-
-export default UploadLogo
+export default UploadLogo;

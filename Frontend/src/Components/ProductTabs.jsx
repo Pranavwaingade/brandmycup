@@ -1,80 +1,92 @@
-import React, { useState } from 'react'
-import '../Style/ProductTabs.css'
+import React, { useState } from "react";
+import "../Style/ProductTabs.css";
 
 const ProductTabs = () => {
-  const [isdeascrib, setIsdeascrib] = useState();
-  const [isspecific, setIsspecific] = useState();
-  const [isreview, setIsreview] = useState();
-  function handeldiscrib(e) {
-    e.preventDefault(); // Prevent page reload on anchor click
-    if (isdeascrib == true) {
-      setIsdeascrib(false);
-    }
-    else {
-      setIsdeascrib(true);
-    }
-  }
 
-  function handelspecifi(e) {
-    e.preventDefault(); // Prevent page reload on anchor click
-    if (isspecific == true) {
-      setIsspecific(false);
-    }
-    else {
-      setIsspecific(true);
-    }
-  }
-
-  function handelreview(e) {
-    e.preventDefault(); // Prevent page reload on anchor click
-    if (isreview == true) {
-      setIsreview(false);
-    }
-    else {
-      setIsreview(true);
-    }
-  }
+  const [activeTab, setActiveTab] = useState("description");
 
   return (
-    <div className='protab'>
-      <h2 href="#" onClick={handeldiscrib}>Description</h2>
-      {isdeascrib && (
-        <>
-          <p>Our premium paper cups are made from
-            high-quality food-grade paper,
-            designed for tea, coffee,
-            and hot beverages.
-             <br />
-            These cups are durable,
-            eco-friendly,
-            and suitable for custom logo printing.</p>
-        </>
-      )}
-      <h2 href="#" onClick={handelspecifi}>Specifications</h2>
-      {isspecific && (
-        <>
-          <p>Capacity : 250ml</p>
-          <p>Material : Food Grade Paper</p>
-          <p>Printing : Offset Printing</p>
-        </>
-      )}
+    <div className="product-tabs">
 
-      <h2 href="#" onClick={handelreview}>Reviews</h2>
-      {isreview && (
-        <>
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>Very good quality.</p>
-          <p>-Rahul</p>
-          ------------------------
-          <p>⭐⭐⭐⭐☆</p>
-          <p>Printing quality is amazing.</p>
-          <p>-Priya</p>
-        </>
-      )}
+      <div className="tab-header">
+
+        <button
+          className={activeTab === "description" ? "active" : ""}
+          onClick={() => setActiveTab("description")}
+        >
+          Description
+        </button>
+
+        <button
+          className={activeTab === "specification" ? "active" : ""}
+          onClick={() => setActiveTab("specification")}
+        >
+          Specifications
+        </button>
+
+        <button
+          className={activeTab === "review" ? "active" : ""}
+          onClick={() => setActiveTab("review")}
+        >
+          Reviews
+        </button>
+
+      </div>
+
+      <div className="tab-content">
+
+        {activeTab === "description" && (
+          <div>
+            <p>
+              Our premium paper cups are made from high-quality food-grade
+              paper. They are perfect for tea, coffee and other hot beverages.
+            </p>
+
+            <p>
+              These cups are durable, leak-resistant, eco-friendly and support
+              high-quality custom logo printing for your business.
+            </p>
+          </div>
+        )}
+
+        {activeTab === "specification" && (
+          <div>
+
+            <p><strong>Capacity :</strong> 250 ml</p>
+
+            <p><strong>Material :</strong> Food Grade Paper</p>
+
+            <p><strong>Printing :</strong> Offset Printing</p>
+
+            <p><strong>Quality :</strong> Premium</p>
+
+            <p><strong>Usage :</strong> Tea / Coffee</p>
+
+          </div>
+        )}
+
+        {activeTab === "review" && (
+          <div>
+
+            <div className="review-box">
+              ⭐⭐⭐⭐⭐
+              <p>Very good quality.</p>
+              <span>- Rahul</span>
+            </div>
+
+            <div className="review-box">
+              ⭐⭐⭐⭐☆
+              <p>Printing quality is amazing.</p>
+              <span>- Priya</span>
+            </div>
+
+          </div>
+        )}
+
+      </div>
+
     </div>
+  );
+};
 
-
-  )
-}
-
-export default ProductTabs
+export default ProductTabs;

@@ -1,37 +1,79 @@
-import React from 'react'
-import '../Style/ProductOptions.css'
+import React from 'react';
+import '../Style/ProductOptions.css';
 
 const ProductOptions = () => {
   return (
-    <>
-      <div className='part'>
-        <div className="size">
-          <h3>Select Cup Size</h3>
+    <div className="part">
 
-          <label htmlFor=""><input type="radio" /> 150ml</label>
-          <label htmlFor=""><input type="radio" /> 250ml</label>
-          <label htmlFor=""><input type="radio" /> 350ml</label>
-          <label htmlFor=""><input type="radio" /> 500ml</label>
-        </div>
+      <div className="option-group">
+        <h3>Select Cup Size</h3>
 
-        <div className="paperQuality">
-          <h3>Paper Quality</h3>
-          <label htmlFor=""><input type="radio" /> Standard</label>
-          <label htmlFor=""><input type="radio" /> Premium</label>
-          <label htmlFor=""><input type="radio" /> Eco Friendly</label>
-        </div>
+        <label>
+          <input type="radio" name="size" />
+          150 ml
+        </label>
 
-        <div className="Shape">
-          <h3>Shapes</h3>
-          <label htmlFor=""><input type="radio" /> Cylindrical</label>         
-          <label htmlFor=""><input type="radio" /> Flared Rim</label>        
-          <label htmlFor=""><input type="radio" /> Wide Bowl</label>       
-          <label htmlFor=""><input type="radio" /> Thick Tapered</label>
-        </div>
+        <label>
+          <input type="radio" name="size" />
+          250 ml
+        </label>
 
+        <label>
+          <input type="radio" name="size" />
+          350 ml
+        </label>
+
+        <label>
+          <input type="radio" name="size" />
+          500 ml
+        </label>
       </div>
-    </>
-  )
-}
 
-export default ProductOptions
+      <div className="option-group">
+        <h3>Paper Quality</h3>
+
+        <label>
+          <input type="radio" name="quality" />
+          Standard
+        </label>
+
+        <label>
+          <input type="radio" name="quality" />
+          Premium
+        </label>
+
+        <label>
+          <input type="radio" name="quality" />
+          Eco Friendly
+        </label>
+      </div>
+
+      <div className="option-group">
+        <h3>Shape</h3>
+
+        <label>
+          <input type="radio" name="shape" />
+          Cylindrical
+        </label>
+
+        <label>
+          <input type="radio" name="shape" />
+          Flared Rim
+        </label>
+
+        <label>
+          <input type="radio" name="shape" />
+          Wide Bowl
+        </label>
+
+        <label>
+          <input type="radio" name="shape" />
+          Thick Tapered
+        </label>
+      </div>
+
+    </div>
+  );
+};
+
+export default ProductOptions;

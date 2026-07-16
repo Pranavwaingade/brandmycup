@@ -1,18 +1,102 @@
 .action{
-    display:flex ;
-    justify-content: space-around;
+    display:flex;
+    gap:15px;
+    width:100%;
+    align-items:center;
+    flex-wrap:wrap;
 }
 
 .action button{
-    font-size: small;
-    width: 30%;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:1rem;
+    font-weight:600;
 }
 
-.custom{
-    background-color:#8d4a23b4 ;
-    color: white;
+/* Customize Button */
+
+.custom-btn{
+    flex:1;
+    min-width:180px;
+    height:50px;
+    background:var(--primary-color);
+    color:white;
 }
 
-.button svg{
-    color: #8d4a23b4;
+.custom-btn:hover{
+    background:var(--secondary-color);
+}
+
+/* Cart Button */
+
+.cart-btn{
+    flex:1;
+    min-width:160px;
+    height:50px;
+    background:white;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color) !important;
+}
+
+.cart-btn:hover{
+    background:var(--primary-color);
+    color:white;
+}
+
+/* Wishlist */
+
+.wishlist-btn{
+    width:55px;
+    height:50px;
+    background:white;
+    border:2px solid var(--primary-color) !important;
+    color:var(--primary-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.wishlist-btn:hover{
+    background:var(--primary-color);
+    color:white;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+.action{
+    flex-direction:column;
+}
+
+.custom-btn,
+.cart-btn{
+    width:100%;
+}
+
+.wishlist-btn{
+    width:100%;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+.action button{
+    font-size:.9rem;
+}
+
+.custom-btn,
+.cart-btn{
+    height:45px;
+}
+
+.wishlist-btn{
+    height:45px;
+}
+
 }

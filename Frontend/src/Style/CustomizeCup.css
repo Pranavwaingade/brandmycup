@@ -1,55 +1,166 @@
 .cupdeisginlayout{
-    padding-top: 85px;
-    width: 100%;
-    height: max-content;
+    width:100%;
+    padding-top:80px;
+    background:var(--background-color);
+    min-height:100vh;
 }
+
+/* Heading */
 
 .cupdeisginlayout .heading{
-    display: flex;
-    height: 180px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #9a5a35a4;
+    width:100%;
+    min-height:180px;
+    background:var(--primary-color);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-.heading h2{
-    color: white;
+.cupdeisginlayout .heading h2{
+    color:white;
+    font-size:2.2rem;
+    margin-bottom:10px;
 }
 
-.heading p{
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0);
+.cupdeisginlayout .heading p{
+    color:#f5f5f5;
+    max-width:700px;
+    font-size:1.05rem;
 }
 
+/* Layout */
 
 .layout{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    height: 920px;
-    /* width: 100%; */
-    /* border: 1px solid black; */
-     padding: 20px;
+    width:100%;
+    max-width:1400px;
+    margin:30px auto;
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+    padding:0 20px;
+}
+
+/* Preview */
+
+.cuppreview{
+    flex:1;
+    min-height:700px;
+    border:1px solid #ddd;
+    border-radius:20px;
+    background:white;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:sticky;
+    top:100px;
+}
+
+/* Right Panel */
+
+.cupoperation{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    border:1px solid var(--border-color);
+    border-radius:20px;
+    padding:20px;
+    background:white;
+}
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1200px){
+
+.layout{
+    gap:20px;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px){
+
+.layout{
+    flex-direction:column;
+}
+
+.cuppreview,
+.cupoperation{
+    width:100%;
 }
 
 .cuppreview{
-    height: 70%;
-    width: 50%;
-    border: 1px solid #000000;
-    border-radius: 20px;
-    align-content: center;
-    text-align: center;
-    overflow: hidden;
+    position:static;
+    min-height:500px;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+.cupdeisginlayout{
+    padding-top:70px;
+}
+
+.cupdeisginlayout .heading{
+    min-height:150px;
+    padding:20px 15px;
+}
+
+.cupdeisginlayout .heading h2{
+    font-size:1.8rem;
+}
+
+.cupdeisginlayout .heading p{
+    font-size:.95rem;
+}
+
+.layout{
+    padding:15px;
+}
+
+.cuppreview{
+    min-height:380px;
 }
 
 .cupoperation{
-    height: 92%;
-    width: 40%;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #A5B29A;
+    padding:15px;
 }
 
+}
 
+/* ---------- Small Mobile ---------- */
+
+@media (max-width:480px){
+
+.cupdeisginlayout .heading h2{
+    font-size:1.5rem;
+}
+
+.cupdeisginlayout .heading p{
+    font-size:.9rem;
+}
+
+.layout{
+    padding:10px;
+}
+
+.cuppreview{
+    min-height:300px;
+    border-radius:15px;
+}
+
+.cupoperation{
+    border-radius:15px;
+    padding:12px;
+}
+
+}

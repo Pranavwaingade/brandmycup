@@ -1,28 +1,49 @@
-import React from 'react'
-import '../Style/QuantitySelector.css'
+import React, { useState } from 'react';
+import '../Style/QuantitySelector.css';
 
 const QuantitySelector = () => {
-   
-  let count=1;
 
-  function handeladd(){
-    count=+1;
-    console.log(count);
-    return;
-  }
+  const [count, setCount] = useState(1);
 
-  function handelmins(){
+  const handleAdd = () => {
+    setCount(count + 1);
+  };
 
-    return;
-  }
+  const handleMinus = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
 
   return (
-    <>
-    <div className="quan">
-      <h2>Qunatity:<button onClick={handeladd}>[+]</button>  {count}  <button onClick={handelmins}>[-]</button></h2>
-    </div>
-    </>
-  )
-}
+    <div className="quantity">
 
-export default QuantitySelector
+      <h3>Quantity</h3>
+
+      <div className="quantity-box">
+
+        <button
+          className="qty-btn"
+          onClick={handleMinus}
+        >
+          -
+        </button>
+
+        <span className="qty-value">
+          {count}
+        </span>
+
+        <button
+          className="qty-btn"
+          onClick={handleAdd}
+        >
+          +
+        </button>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default QuantitySelector;

@@ -1,139 +1,141 @@
 .preview-container{
+    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
-    width:100%;
-
+    padding:20px;
 }
 
 .cup-box{
     position:relative;
-    width:450px;
+    width:100%;
+    max-width:450px;
 }
 
 .cup-image{
-    height:100% ;
     width:100%;
+    height:auto;
     display:block;
 }
 
-.viewlogo{
-    position:absolute;
-    top:40%;
-    left:50%;
-    transform:translateX(-50%);
-    width:120px;
-    height:120px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:14px;
-    background:transparent;
-    border: none;
-}
-
-.viewlogo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.brand-name{
-    position:absolute;
-    top:60%;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:18px;
-    font-weight:bold;
-    background-color: rgba(255, 255, 255, 0);
-
-}
-
-.brand-name h2{
-    background-color: rgba(255, 255, 255, 0);
-}
-.tagline{
-    position:absolute;
-    top:64%;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:13px;
-    background-color: rgba(255, 255, 255, 0);
-}
-.tagline p{
-    background-color: rgba(255, 255, 255, 0);
-}
-.preview-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-
-}
-
-.cup-box{
-    position:relative;
-    width:450px;
-}
-
-.cup-image{
-    height:100% ;
-    width:100%;
-    display:block;
-}
+/* ---------- Logo ---------- */
 
 .viewlogo{
     position:absolute;
     top:40%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:120px;
-    height:120px;
+    width:110px;
+    height:110px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
 }
 
 .viewlogo img{
     width:100%;
     height:100%;
     object-fit:contain;
-    
-}
-/* .viewlogo{
-    position:absolute;
-    top:39%;
-    left:50%;
-    transform:translateX(-50%);
-    width:120px;
-    height:120px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:14px;
-    background:transparent;
-    border: none;
 }
 
-.viewlogo img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-} */
+/* ---------- Brand Name ---------- */
 
 .brand-name{
     position:absolute;
     top:60%;
     left:50%;
     transform:translateX(-50%);
-    font-size:18px;
-    font-weight:bold;
-    background-color: rgba(255, 255, 255, 0);
-
+    width:70%;
+    text-align:center;
+    background:transparent;
 }
+
+.brand-name h2{
+    font-size:1.4rem;
+    font-weight:700;
+    background:transparent;
+    word-break:break-word;
+}
+
+/* ---------- Tagline ---------- */
 
 .tagline{
     position:absolute;
-    top:64%;
+    top:66%;
     left:50%;
     transform:translateX(-50%);
-    font-size:13px;
-    background-color: rgba(255, 255, 255, 0);
+    width:75%;
+    text-align:center;
+    background:transparent;
+}
+
+.tagline p{
+    font-size:0.9rem;
+    background:transparent;
+    word-break:break-word;
+}
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1200px){
+
+.cup-box{
+    max-width:400px;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.cup-box{
+    max-width:320px;
+}
+
+.viewlogo{
+    width:85px;
+    height:85px;
+}
+
+.brand-name h2{
+    font-size:1.1rem;
+}
+
+.tagline p{
+    font-size:0.8rem;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+.cup-box{
+    max-width:250px;
+}
+
+.viewlogo{
+    width:65px;
+    height:65px;
+}
+
+.brand-name{
+    top:61%;
+}
+
+.brand-name h2{
+    font-size:.9rem;
+}
+
+.tagline{
+    top:67%;
+}
+
+.tagline p{
+    font-size:.7rem;
+}
+
 }
