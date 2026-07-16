@@ -1,39 +1,135 @@
+/* ===========================
+   How It Works
+=========================== */
 
-.howitworks{
-    background-color: #8d4a2336;
-    height: 720px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.Steps{
-   width: 95%;
-   height: 80%;
-   background-color: #8d4a2300;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 20px;
+.how-it-works{
+
+    padding:90px 20px;
+
+    background:#f8f6f3;
+
 }
 
-.stepsin{
-    width: 20%;
-    height: 70%;
-    border-radius: 50px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
 }
 
-.stepsin div{
-    width: 80%;
-    text-align: center;    
+.section-title h1{
+
+    font-size:42px;
+
+    color:var(--primary);
+
 }
 
-.stepsin svg{
-    color: #8d4a23a1;
+.section-title p{
+
+    max-width:700px;
+
+    margin:20px auto 0;
+
+    color:var(--gray);
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Steps
+=========================== */
+
+.steps-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.step-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.step-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.step-icon{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.step-card h2{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.step-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.steps-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.steps-container{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title h1{
+
+font-size:34px;
+
+}
+
 }

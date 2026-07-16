@@ -1,22 +1,70 @@
-import React from 'react'
-import '../Style/Whychooseme.css'
+import React from "react";
+import "../Style/WhyChooseme.css";
 
-const Whychooseme = () => {
-    return (
-        <>
-            <div className="why">
-                <h1>Why Choose BrandMyCup? </h1>
+const features = [
+  {
+    icon: "🖨️",
+    title: "High Quality Printing",
+    text: "Sharp and vibrant printing for every paper cup."
+  },
+  {
+    icon: "🌱",
+    title: "Eco Friendly",
+    text: "Made using sustainable and recyclable materials."
+  },
+  {
+    icon: "🚚",
+    title: "Fast Delivery",
+    text: "Quick production and on-time delivery."
+  },
+  {
+    icon: "💰",
+    title: "Bulk Discounts",
+    text: "Special pricing for large quantity orders."
+  },
+  {
+    icon: "🎨",
+    title: "Easy Customization",
+    text: "Customize logo, colors, size and paper quality."
+  },
+  {
+    icon: "🔒",
+    title: "Secure Payments",
+    text: "Safe online payments with trusted gateways."
+  }
+];
 
-                <marquee behavior="" direction="" className='Marque'><b>✅ High Quality Printing:</b> Get sharp, vibrant, and long-lasting prints that showcase your brand professionally on every cup.
-                    ✅<b> Eco-Friendly Materials:</b> Our paper cups are made using sustainable and environmentally responsible materials to support a greener future.
-                    ✅<b> Fast Delivery:</b> We ensure quick production and timely delivery so your business never runs out of branded packaging.
-                    ✅<b> Bulk Order Discounts:</b> Save more with competitive pricing and special discounts on large-volume orders.
-                    ✅<b> Easy Customization:</b> Customize cup size, shape, colors, paper quality, and branding with a simple and user-friendly design process.
-                    ✅<b> Secure Payments:</b> Enjoy safe and secure online transactions through trusted payment gateways and encrypted payment processing.
-                </marquee>
+const WhyChooseUs = () => {
+  return (
+    <section className="why-section">
+
+      <h1>Why Choose BrandMyCup?</h1>
+
+      <p>
+        Everything you need to create premium branded paper cups for your
+        business.
+      </p>
+
+      <div className="why-grid">
+
+        {features.map((item, index) => (
+          <div className="why-card" key={index}>
+
+            <div className="why-icon">
+              {item.icon}
             </div>
-        </>
-    )
-}
 
-export default Whychooseme
+            <h2>{item.title}</h2>
+
+            <p>{item.text}</p>
+
+          </div>
+        ))}
+
+      </div>
+
+    </section>
+  );
+};
+
+export default WhyChooseUs;

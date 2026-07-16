@@ -1,26 +1,38 @@
-import React from 'react'
-import '../Style/Hero.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "../Style/Hero.css";
 
-function Hero() {
+const Hero = () => {
   return (
-    <>
-      <div className="container">
+    <section className="hero">
 
-        <div className="box1">
+      <div className="hero-box hero-left"></div>
 
+      <div className="hero-content">
+        <h1>
+          Design Your Own <span>Branded Paper Cups</span>
+        </h1>
+
+        <p>
+          Create premium custom paper cups with your own logo,
+          brand name and unique identity.
+        </p>
+
+        <div className="hero-buttons">
+          <Link to="/customize" className="primary-btn">
+            Start Designing
+          </Link>
+
+          <Link to="/products" className="secondary-btn">
+            View Products
+          </Link>
         </div>
-        <div className="box2"> <h1>Design Your Own Branded Paper Cups</h1>
-          <p>Create custom paper cups with your logo and branding.</p>
-          <br />
-          <div className="button">
-            <div><a href="">Start Designing</a></div>
-            <div><a href="/products">View Products</a></div>
-          </div>
-        </div>
-        <div className="box3"></div>
       </div>
-    </>
-  )
-}
 
-export default Hero
+      <div className="hero-box hero-right"></div>
+
+    </section>
+  );
+};
+
+export default Hero;

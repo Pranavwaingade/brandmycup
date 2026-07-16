@@ -1,25 +1,54 @@
-import React from 'react'
-import '../Style/ProductCard.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "../Style/ProductCard.css";
 
 const ProductCard = ({ product }) => {
-    
-    return (
-        <>
-            <div className="productcard" style={{boxShadow: '0 4px 12px rgba(0, 0, 0, 0.29)'}}>
-                <div className="productimg">
-                    <img src={product.img} alt="" />
-                </div>
-                <div className="productdeatilas">
-                    <h1>{product.name}</h1>
-                    <p>{product.description}</p>
-                    <span style={{paddingRight:"40%"}}>{product.size}</span>   <span>⭐{product.rating}</span>
-                    <h3 className='price'>₹ {product.price}/ Cup</h3>
-                    <a href="/productdetails">View Details</a>
-                </div>
-            </div>
+  return (
+    <div className="product-card">
 
-        </>
-    )
-}
+      <div className="product-image">
 
-export default ProductCard
+        <img
+          src={product.image}
+          alt={product.name}
+        />
+
+      </div>
+
+      <div className="product-details">
+
+        <span className="category">
+          {product.category}
+        </span>
+
+        <h2>{product.name}</h2>
+
+        <p>{product.description}</p>
+
+        <div className="product-info">
+
+          <span>{product.size}</span>
+
+          <span>⭐ {product.rating}</span>
+
+        </div>
+
+        <h3 className="price">
+          ₹{product.price}
+          <span>/Cup</span>
+        </h3>
+
+        <Link
+          to={`/productdetails/${product.id}`}
+          className="view-btn"
+        >
+          View Details
+        </Link>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default ProductCard;

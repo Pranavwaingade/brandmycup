@@ -1,77 +1,288 @@
-.container{
-    width: 100%;
-    height: 900px;
-    background-color: white;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
+/* ===========================
+   Hero Section
+=========================== */
 
+.hero{
+    width:100%;
+    min-height:100vh;
 
-.box1{
-    height: 250px;
-    width: 510px;
-    border-left: 15px solid #bf54179c;
-    border-bottom:15px solid #bf54179c ;
-    border-radius: 10px;
-    position: relative;
-    left: 205px;
-    top: 125px;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-.box2{
-    height: 75%;
-    width: 1000px;
-    align-content: center;
-    justify-content: center;
-    font-size: x-large;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-}
-
-.box2 a{
-    height: 5%;
-    width: 200px;
-    text-decoration: none;
-    color: white; 
-    gap: 5px;
-    background-color: #8d4a2300;
-}
-.box2 a:hover{
-    color: #8d4a23b4;
-}
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.button div{
-    width:200px ;
-    height: 55px;
-    background-color: #8d4a23b4;
-    text-align: center;
-    align-content: center;
-    border-radius: 30px;
-}
-
-.button div:hover{
-    border: 1px solid #8d4a23b4;
-    background-color: white;
-}
-
-
-.box3{
-    height:250px;
-    width: 510px;
-    border-right: 15px solid #bf54179c;
-    border-top:15px solid #bf54179c ;
-    border-radius: 10px;
     position:relative;
-    right: 220px;
-    bottom: 125px;
 
+    overflow:hidden;
+
+    background:var(--white);
+}
+
+/* ===========================
+   Decorative Boxes
+=========================== */
+
+.hero-box{
+
+    width:420px;
+    height:220px;
+
+    position:absolute;
+
+    border-radius:12px;
+
+}
+
+.hero-left{
+
+    left:80px;
+    bottom:80px;
+
+    border-left:15px solid var(--primary);
+    border-bottom:15px solid var(--primary);
+
+    opacity:.35;
+
+}
+
+.hero-right{
+
+    right:80px;
+    top:80px;
+
+    border-right:15px solid var(--primary);
+    border-top:15px solid var(--primary);
+
+    opacity:.35;
+
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.hero-content{
+
+    width:60%;
+    max-width:900px;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.hero-content h1{
+
+    font-size:64px;
+    color:var(--black);
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.hero-content span{
+
+    color:var(--primary);
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+}
+
+.hero-buttons a{
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:35px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.primary-btn:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.secondary-btn{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.hero-content{
+
+width:80%;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+}
+
+.hero-box{
+
+width:300px;
+height:180px;
+
+}
+
+.hero-left{
+
+left:30px;
+
+}
+
+.hero-right{
+
+right:30px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:120px 20px 80px;
+
+min-height:auto;
+
+}
+
+.hero-content{
+
+width:100%;
+
+}
+
+.hero-content h1{
+
+font-size:36px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero-buttons a{
+
+width:240px;
+
+text-align:center;
+
+}
+
+.hero-box{
+
+display:none;
+
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+font-size:30px;
+
+}
+
+.hero-content p{
+
+font-size:15px;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+
+}
 
 }

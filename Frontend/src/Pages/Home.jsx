@@ -1,24 +1,27 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
-import Hero from '../Components/Hero'
-import Footer from '../Components/Footer'
-import HowItWorks from '../Components/HowItWorks'
-import FeaturedProducts from '../Components/FeaturedProducts'
-import Feedback from '../Components/Feedback'
-import Whychooseme from '../Components/Whychooseme'
+import Navbar from "../Components/Navbar";
+import Hero from "../Components/Hero";
+import WhyChooseUs from "../Components/WhyChooseme";
+import FeaturedProducts from "../Components/FeaturedProducts";
+import HowItWorks from "../Components/HowItWorks";
+import Feedback from "../Components/Feedback";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <HowItWorks/>
-    <FeaturedProducts/>
-    <Whychooseme/>
-    <Feedback/>
-    <Footer/>
+      <Navbar />
+
+      <main>
+        <Hero />
+        <WhyChooseUs />
+        <FeaturedProducts />
+        <HowItWorks />
+        <Feedback />
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -1,73 +1,188 @@
-*{
-    background-color:white;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: #fff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 50px;
+
+  background: #fff;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 55px;
+}
+
+.logo-text {
+  display: flex;
+}
+
+.cups {
+  color: #8d4a23;
+}
+
+.craft {
+  color: #87947b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+
+  list-style: none;
+}
+
+.nav-links a {
+  color: #87947b;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: #8d4a23;
+}
+
+.nav-auth {
+  display: flex;
+
+  gap: 20px;
+
+  list-style: none;
+}
+
+.nav-auth a {
+  color: #87947b;
+
+  transition: .3s;
+}
+
+.nav-auth a:hover {
+  color: #8d4a23;
+}
+
+/* Tablet */
+
+@media (max-width:992px){
 
 .navbar{
-    position: fixed;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    z-index: 1000;
-}
 
-.logo{
-    width:20%;
-    height: 100%;
-    justify-content: start;
-    align-items: center;
-    overflow: hidden;
-    display: flex;
-    
-}
+padding:0 20px;
 
-.logo-img{
-    width: 15%;
 }
 
 .nav-links{
-    list-style: none;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    text-decoration: none;
-    width: 68%;
-    gap: 5%;
+
+gap:20px;
+
 }
 
 .nav-links a{
-    color: #87947b;
-    font-size: x-large;
+
+font-size:17px;
+
 }
 
-.nav-links a:hover{
-    color: #8d4a23;
-    text-decoration:overline;
+.logo-img{
+
+width:45px;
+
 }
 
-.nav-auth a{
-    color: #87947b;
-    font-size: x-large;
 }
 
-.nav-auth a:hover{
-    color: #8d4a23;
+/* Mobile */
+
+@media (max-width:768px){
+
+.navbar{
+
+flex-wrap:wrap;
+
+height:auto;
+
+padding:15px;
+
 }
 
+.logo{
+
+width:100%;
+
+justify-content:center;
+
+margin-bottom:15px;
+
+}
+
+.nav-links{
+
+width:100%;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
 
 .nav-auth{
-    width: 10%;
-    display: flex;
-    justify-content:flex-end;
-    gap: 15%;
-    align-content:center;
-    list-style: none;
+
+width:100%;
+
+justify-content:center;
+
+margin-top:15px;
+
 }
 
-a{
-    text-decoration: none;
-    font-size:x-large;
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.logo-text h2{
+
+font-size:22px;
+
+}
+
+.nav-links a{
+
+font-size:16px;
+
+}
+
 }

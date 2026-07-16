@@ -1,82 +1,98 @@
-import React from 'react'
-import '../Style/FeaturedProducts.css'
-import ml150 from '../img/150ml.png'
-import ml250 from '../img/250ml.png'
-import ml350 from '../img/350ml.png'
-import bg from '../img/bg.webp'
+import React from "react";
+import "../Style/FeaturedProducts.css";
 
+import ml150 from "../img/150ml.png";
+import ml250 from "../img/250ml.png";
+import ml350 from "../img/350ml.png";
 
+const cups = [
+  {
+    id: 1,
+    title: "Small Paper Cup",
+    size: "150ml",
+    image: ml150,
+    bestFor: ["Tea", "Espresso", "Sampling"],
+    features: [
+      "Leak Resistant",
+      "Eco Friendly",
+      "Logo Printing",
+      "Compact Design"
+    ]
+  },
+  {
+    id: 2,
+    title: "Medium Paper Cup",
+    size: "250ml",
+    image: ml250,
+    bestFor: ["Coffee", "Juice", "Soft Drinks"],
+    features: [
+      "Premium Print",
+      "Strong Material",
+      "Multiple Colors",
+      "Best Selling"
+    ]
+  },
+  {
+    id: 3,
+    title: "Large Paper Cup",
+    size: "350ml",
+    image: ml350,
+    bestFor: ["Cold Coffee", "Milkshake", "Smoothie"],
+    features: [
+      "Extra Capacity",
+      "Premium Finish",
+      "Strong Paper",
+      "Full Wrap Branding"
+    ]
+  }
+];
 
 const FeaturedProducts = () => {
   return (
-    <>
-      <div className="featured">
-        <div className='content'>
-          <h1>Explore Our Custom Paper Cup Collection</h1><br />
-          <p>Choose from a variety of premium-quality paper cups designed to showcase your brand and create a memorable customer experience.</p>
-          <div className="slider-container">
-            <div className="card card-1">
-              <h1>Small Paper Cup (150ml)</h1> <br />
-              <div className='features'>
-                <p style={{color:'black'}}><b>Best For:</b></p>
-                <ul>
-                  <li>Tea</li>
-                  <li>Espresso</li>
-                  <li>Sampling</li>
-                </ul>
-                <br />
-                <p style={{color:'black'}}><b>Features:</b></p>
-                <ul><li>Compact design</li>
-                  <li>Leak-resistant coating</li>
-                  <li>Custom logo printing</li>
-                  <li>Eco-friendly material</li>
-                </ul>
-              </div>
-              <img src={ml150} alt="" />
-            </div>
-            <div className="card card-2">
-              <h1>Medium Paper Cup (250ml)</h1> <br />
-              <div className='features'>
-                <p style={{color:'black'}}><b>Best For:</b></p>
-                <ul>
-                  <li>Coffee</li>
-                  <li>Juice</li>
-                  <li>Soft Drinks</li>
-                </ul>
-                <br />
-                <p style={{color:'black'}}><b>Features:</b></p>
-                <ul><li>Most popular size</li>
-                  <li>Premium print quality</li>
-                  <li>Durable paper material</li>
-                  <li>Multiple color options</li>
-                </ul>
-              </div>
-              <img src={ml250} alt="" style={{width:'50%'}} />
-            </div>
-            <div className="card card-3">
-              <h1>Large Paper Cup (350ml)</h1> <br />
-              <div className='features'>
-                <p style={{color:'black'}}><b>Best For:</b></p>
-                <ul>
-                  <li>Cold Coffee</li>
-                  <li>Milkshakes</li>
-                  <li>Smoothies</li>
-                </ul>
-                <br />
-                <p style={{color:'black'}}><b>Features:</b></p>
-                <ul><li>Extra capacity</li>
-                  <li>Strong paper construction</li>
-                  <li>Full-wrap branding support</li>
-                  <li>High-quality finish</li>
-                </ul>
-              </div>
-              <img src={ml350} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
+    <section className="featured">
 
-export default FeaturedProducts
+      <h1>Explore Our Custom Paper Cup Collection</h1>
+
+      <p>
+        Choose from premium quality paper cups designed for your business.
+      </p>
+
+      <div className="featured-grid">
+
+        {cups.map((cup) => (
+
+          <div className="featured-card" key={cup.id}>
+
+            <img src={cup.image} alt={cup.title} />
+
+            <h2>{cup.title}</h2>
+
+            <span>{cup.size}</span>
+
+            <h3>Best For</h3>
+
+            <ul>
+              {cup.bestFor.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3>Features</h3>
+
+            <ul>
+              {cup.features.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </div>
+
+        ))}
+
+      </div>
+
+    </section>
+  );
+};
+
+export default FeaturedProducts;
