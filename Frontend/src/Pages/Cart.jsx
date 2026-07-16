@@ -7,7 +7,7 @@ import Reletedgrid from '../Components/Reletedgrid'
 import Emptycart from '../Components/Emptycart'
 
 const Cart = () => {
-    const cartitem = 0;
+    const cartitem = 1;
     return (
         <div>
             <Navbar />
@@ -23,7 +23,7 @@ const Cart = () => {
                     {cartitem === 0 ? (
                         <Emptycart />
                     ) : (
-                        <div>
+                        <div style={{display:'flex', gap:'15px',width:'100%'}}>
                             <CartProducts />
                             <OrderSummary />
                         </div>

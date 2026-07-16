@@ -44,7 +44,7 @@ const Emptycart = () => {
             cursor: "pointer",
             fontSize: "18px",
             fontWeight: "600",
-            width:'fit-content'
+            width: 'fit-content'
           }}
         >
           Continue Shopping

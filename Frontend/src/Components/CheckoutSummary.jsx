@@ -2,7 +2,7 @@ import React from 'react'
 import cartbox from '../img/wallet.png'
 import { useNavigate } from 'react-router-dom';
 
-const OrderSummary = () => {
+const CheckoutSummary = () => {
   const navigate = useNavigate()
 
   const subtotal = 3100;
@@ -11,12 +11,11 @@ const OrderSummary = () => {
   const gst = (subtotal - discount) * 0.18;
   const total = subtotal - discount + gst + delivery;
 
-
-  const handelclick =()=>{
+  const handelclick = () => {
     navigate('/Cart/checkout');
   };
   return (
-    <div style={{ width: '30%', height: 'fit-content', borderRadius: '20px', padding: '15px', position: 'sticky', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.29)' }}>
+    <div style={{ width: '95%' }}>
       <div className="ordersummary" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
 
         <h2><img src={cartbox} alt="" style={{ width: '8%' }} />  Order Summary</h2>
@@ -50,10 +49,14 @@ const OrderSummary = () => {
 
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <h2></h2>
-          <h2>₹{total}</h2>
+          <h2 style={{
+            color: '#9C6B45',
+            fontSize: '36px',
+            fontWeight: '700'
+          }}>₹{total}</h2>
         </div>
 
-        <div style={{padding:'5px'}}>
+        <div style={{ padding: '5px' }}>
           <input
             type="text"
             placeholder="Coupon Code"
@@ -64,16 +67,11 @@ const OrderSummary = () => {
             }}
           />
 
-          <button  style={{ height: '30px', fontSize: 'larger', border: 'none', color: 'black', backgroundColor: 'none', marginLeft:'15px' }}>Apply</button>
-
+          <button style={{ height: '30px', fontSize: 'larger', border: 'none', color: 'black', backgroundColor: 'none', marginLeft: '15px' }}>Apply</button>
         </div>
-        <button onClick={handelclick} style={{ background: " #A46C45", color: "white", border: "none", borderRadius: "10px", fontSize: '18px', fontWeight: 'bold', cursor: 'pointer', transition: '.3s', width: 'fit-content', padding: '5px'}}>Proceed To Checkout</button>
-        <p style={{color:'gray'}}>🔒 Secure Checkout</p>
-
-
       </div>
     </div>
   )
 }
 
-export default OrderSummary
+export default CheckoutSummary
