@@ -16,7 +16,7 @@
 .search-input{
     flex:1;
     height:55px;
-    border:2px solid var(--light-brown);
+    border:2px solid #8d4a23b1;
     border-radius:40px;
     padding:0 20px;
     font-size:18px;
@@ -25,14 +25,14 @@
 }
 
 .search-input:focus{
-    border-color:var(--primary-brown);
+    border-color:#8d4a23;
 }
 
 .search-btn{
     width:170px;
     border:none;
     border-radius:40px;
-    background:var(--primary-brown);
+    background:#8d4a23;
     color:white;
     font-size:18px;
     cursor:pointer;
@@ -40,7 +40,7 @@
 }
 
 .search-btn:hover{
-    background:var(--dark-brown);
+    background:#69371a;
 }
 
 @media(max-width:768px){

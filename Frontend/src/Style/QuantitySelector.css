@@ -7,7 +7,7 @@
 }
 
 .quantity h3{
-    color:var(--primary-color);
+    color:#8d4a23;
     font-size:1.2rem;
 }
 
@@ -23,7 +23,7 @@
     width:45px;
     height:45px;
     border:none;
-    background:var(--primary-color);
+    background:#8d4a23;
     color:white;
     font-size:1.4rem;
     cursor:pointer;
@@ -31,7 +31,7 @@
 }
 
 .qty-btn:hover{
-    background:var(--secondary-color);
+    background:#87947b;
 }
 
 .qty-value{

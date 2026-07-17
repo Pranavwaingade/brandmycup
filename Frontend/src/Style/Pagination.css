@@ -12,7 +12,7 @@
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  background: var(--primary-color);
+  background: #8d4a23;
   color: white;
   cursor: pointer;
   font-size: 16px;
@@ -20,7 +20,7 @@
 }
 
 .page-btn:hover {
-  background: var(--secondary-color);
+  background: #87947b;
 }
 
 .page-numbers {
@@ -38,18 +38,18 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--primary-color);
+  color: #8d4a23;
   border: 1px solid #ddd;
   transition: .3s;
 }
 
 .page-numbers a:hover {
-  background: var(--primary-color);
+  background: #8d4a23;
   color: white;
 }
 
 .page-numbers .active {
-  background: var(--primary-color);
+  background: #8d4a23;
   color: white;
 }
 

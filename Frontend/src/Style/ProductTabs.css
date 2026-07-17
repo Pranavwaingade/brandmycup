@@ -28,7 +28,7 @@
 }
 
 .tab-header button.active{
-    background:var(--primary-color);
+    background:#8d4a23;
     color:white;
 }
 

@@ -15,7 +15,7 @@
 }
 
 .option-group h3{
-    color:var(--primary-color);
+    color:#8d4a23;
     margin-bottom:10px;
     font-size:1.1rem;
 }
@@ -30,7 +30,7 @@
 }
 
 .option-group input[type="radio"]{
-    accent-color:var(--primary-color);
+    accent-color:#8d4a23;
     transform:scale(1.1);
 }
 

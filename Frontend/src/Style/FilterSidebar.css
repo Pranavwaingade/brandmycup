@@ -16,7 +16,7 @@
 
 .innerfilter h2{
     margin-bottom:15px;
-    color:var(--primary-brown);
+    color:#8d4a23;
     font-size:22px;
 }
 
@@ -45,7 +45,7 @@
     height:50px;
     border:none;
     border-radius:10px;
-    background:var(--primary-brown);
+    background:#8d4a23;
     color:white;
     cursor:pointer;
     font-size:18px;
@@ -53,7 +53,7 @@
 }
 
 .clear-btn:hover{
-    background:var(--dark-brown);
+    background:#69371a;
 }
 
 @media(max-width:992px){

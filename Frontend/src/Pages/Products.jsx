@@ -22,14 +22,14 @@ const Products = () => {
 
                         <h1>Premium Custom Paper Cups</h1>
 
-                        <p className="hero-text">
+                        <p className="hero-text" style={{color:'#e5e5e5'}}>
                             Discover premium-quality paper cups for tea,
                             coffee, juice, and more. Customize them with your
                             own logo and branding to make your business stand
                             out.
                         </p>
 
-                        <a href="/customize" className="hero-btn">
+                        <a href="/customizeCup" className="hero-btn">
                             Customize Your Cup
                         </a>
                     </div>

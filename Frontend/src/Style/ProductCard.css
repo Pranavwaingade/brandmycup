@@ -6,7 +6,7 @@
 
     width:100%;
 
-    background:var(--white);
+    background:white;
 
     border:1px solid #e5e5e5;
 
@@ -84,7 +84,7 @@
 
 .category{
 
-    color:var(--secondary);
+    color:#87947b;
 
     font-size:14px;
 
@@ -96,13 +96,13 @@
 
     font-size:24px;
 
-    color:var(--black);
+    color:black;
 
 }
 
 .product-details p{
 
-    color:var(--gray);
+    color:#555;
 
     line-height:1.6;
 
@@ -132,7 +132,7 @@
 
 .price{
 
-    color:var(--primary);
+    color:#8d4a23;
 
     font-size:28px;
 
@@ -160,7 +160,7 @@
 
     border-radius:10px;
 
-    background:var(--primary);
+    background:#8d4a23;
 
     color:white;
 
@@ -174,7 +174,7 @@
 
 .view-btn:hover{
 
-    background:var(--secondary);
+    background:#87947b;
 
 }
 
