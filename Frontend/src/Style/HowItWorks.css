@@ -2,39 +2,39 @@
    How It Works
 =========================== */
 
-.how-it-works{
+.how-it-works {
 
-    padding:90px 20px;
+    padding: 90px 20px;
 
-    background:#f8f6f3;
-
-}
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
+    background: #f8f6f3;
 
 }
 
-.section-title h1{
+.section-title {
 
-    font-size:42px;
+    text-align: center;
 
-    color:var(--primary);
+    margin-bottom: 60px;
 
 }
 
-.section-title p{
+.section-title h1 {
 
-    max-width:700px;
+    font-size: 42px;
 
-    margin:20px auto 0;
+    color: #8d4a23;
 
-    color:var(--gray);
+}
 
-    font-size:18px;
+.section-title p {
+
+    max-width: 700px;
+
+    margin: 20px auto 0;
+
+    color: #555;
+
+    font-size: 18px;
 
 }
 
@@ -42,94 +42,94 @@
    Steps
 =========================== */
 
-.steps-container{
+.steps-container {
 
-    max-width:1300px;
+    max-width: 1300px;
 
-    margin:auto;
+    margin: auto;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap:25px;
-
-}
-
-.step-card{
-
-    background:white;
-
-    border-radius:18px;
-
-    padding:35px 25px;
-
-    text-align:center;
-
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-
-    transition:.3s;
+    gap: 25px;
 
 }
 
-.step-card:hover{
+.step-card {
 
-    transform:translateY(-10px);
+    background: white;
 
-}
+    border-radius: 18px;
 
-.step-icon{
+    padding: 35px 25px;
 
-    font-size:60px;
+    text-align: center;
 
-    margin-bottom:20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
 
-}
-
-.step-card h2{
-
-    color:var(--primary);
-
-    margin-bottom:15px;
-
-    font-size:24px;
+    transition: .3s;
 
 }
 
-.step-card p{
+.step-card:hover {
 
-    color:var(--gray);
+    transform: translateY(-10px);
 
-    line-height:1.8;
+}
+
+.step-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+.step-card h2 {
+
+    color: #8d4a23;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+}
+
+.step-card p {
+
+    color: #555;
+
+    line-height: 1.8;
 
 }
 
 /* Tablet */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-.steps-container{
+    .steps-container {
 
-grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-}
+    }
 
 }
 
 /* Mobile */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.steps-container{
+    .steps-container {
 
-grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-}
+    }
 
-.section-title h1{
+    .section-title h1 {
 
-font-size:34px;
+        font-size: 34px;
 
-}
+    }
 
 }

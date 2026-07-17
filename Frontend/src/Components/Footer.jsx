@@ -40,7 +40,7 @@ const Footer = () => {
             Products
           </Link>
 
-          <Link className="footer-link" to="/customize">
+          <Link className="footer-link" to="/customizeCup">
             Customize Cup
           </Link>
 

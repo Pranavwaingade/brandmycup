@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Style/Hero.css";
-import '../Style/Hero.css'
 
 const Hero = () => {
   return (
@@ -20,7 +19,7 @@ const Hero = () => {
         </p>
 
         <div className="hero-buttons">
-          <Link to="/customize" className="primary-btn">
+          <Link to="/customizeCup" className="primary-btn">
             Start Designing
           </Link>
 

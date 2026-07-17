@@ -23,7 +23,7 @@ const Navbar = () => {
         {isLoggedIn && (
           <>
             <li><Link to="/products">Products</Link></li>
-            <li><Link to="/customize">Customize</Link></li>
+            <li><Link to="/customizeCup">Customize</Link></li>
           </>
         )}
 

@@ -8,7 +8,7 @@
 
 .featured h1{
 
-    color:var(--primary);
+    color:#8d4a23;
 
     font-size:42px;
 
@@ -16,7 +16,7 @@
 
 .featured p{
 
-    color:var(--gray);
+    color:#555;
 
     margin:20px auto 50px;
 
@@ -68,13 +68,13 @@
 
     margin:15px 0;
 
-    color:var(--primary);
+    color:#8d4a23;
 
 }
 
 .featured-card span{
 
-    color:var(--secondary);
+    color:#87947b;
 
     font-weight:600;
 

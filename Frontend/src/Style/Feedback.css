@@ -24,11 +24,11 @@
 
 .feedback-heading h2{
     font-size:2.7rem;
-    color:var(--primary-color);
+    color:#8d4a23;
 }
 
 .feedback-heading span{
-    color:var(--secondary-color);
+    color:#87947b;
 }
 
 .customer-feed{
@@ -38,7 +38,7 @@
 }
 
 .feedback-card{
-    background:var(--primary-color);
+    background:#8d4a23c2;
     color:black;
 
     border-radius:20px;
@@ -90,6 +90,7 @@
 /* ====================== */
 
 @media(max-width:768px){
+
 
 .whychoose{
     padding:60px 20px;

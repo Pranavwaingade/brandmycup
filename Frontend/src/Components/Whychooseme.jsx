@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
   return (
     <section className="why-section">
 
-      <h1>Why Choose BrandMyCup?</h1>
+      <h1 style={{color:'#8d4a23'}}>Why Choose BrandMyCup?</h1>
 
       <p>
         Everything you need to create premium branded paper cups for your
