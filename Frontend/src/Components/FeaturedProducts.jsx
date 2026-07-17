@@ -84,7 +84,9 @@ const FeaturedProducts = () => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-
+            <button className="featured-btn">
+              Customize Now
+            </button>
           </div>
 
         ))}

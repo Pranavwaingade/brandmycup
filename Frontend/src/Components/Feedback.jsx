@@ -55,6 +55,9 @@ const Feedback = () => {
           {feedbackList.map((item) => (
             <div key={item.id} className="feedback-card">
               <div className="inbox">
+                <div className="avatar">
+                  {item.customer.charAt(0)}
+                </div>
                 <h3>{item.customer}</h3>
 
                 <p className="rating">

@@ -6,8 +6,7 @@
 
     padding: 90px 20px;
 
-    background: #f8f6f3;
-
+    background: linear-gradient(180deg, #fafafa, #f4f4f4);
 }
 
 .section-title {
@@ -20,7 +19,9 @@
 
 .section-title h1 {
 
-    font-size: 42px;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+
+    font-weight: 800;
 
     color: #8d4a23;
 
@@ -50,39 +51,55 @@
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
-    gap: 25px;
+    gap: 30px;
 
 }
 
+
 .step-card {
 
-    background: white;
+    background: #fff;
 
-    border-radius: 18px;
+    border-radius: 22px;
 
-    padding: 35px 25px;
+    padding: 35px 30px;
 
     text-align: center;
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+    border: 1px solid #ececec;
 
-    transition: .3s;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+    transition: .35s ease;
+
+    cursor: pointer;
 
 }
 
 .step-card:hover {
 
-    transform: translateY(-10px);
+    transform: translateY(-12px);
 
+    border-color: #8d4a23;
+
+    box-shadow: 0 20px 40px rgba(141, 74, 35, .18);
 }
 
 .step-icon {
 
-    font-size: 60px;
 
+    font-size: 65px;
+
+    transition: .3s;
     margin-bottom: 20px;
+
+}
+
+.step-card:hover .step-icon {
+
+    transform: scale(1.15) rotate(-8deg);
 
 }
 

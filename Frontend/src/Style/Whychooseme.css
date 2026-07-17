@@ -2,37 +2,38 @@
    Why Choose Us
 =========================== */
 
-.why-section{
+.why-section {
 
-    width:100%;
+    width: 100%;
 
-    padding:80px 20px;
+    padding: 80px 20px;
 
-    text-align:center;
-
-}
-
-.why-section h1{
-
-    font-size:42px;
-
-    color:var(--primary);
-
-    margin-bottom:15px;
+    text-align: center;
 
 }
 
-.why-section>p{
+.why-section h1 {
 
-    max-width:700px;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #8d4a23;
 
-    margin:auto;
+    margin-bottom: 15px;
 
-    color:#555;
+}
 
-    font-size:18px;
+.why-section p {
 
-    margin-bottom:50px;
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #555;
+
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    margin-bottom: 50px;
 
 }
 
@@ -40,17 +41,16 @@
    Grid
 =========================== */
 
-.why-grid{
+.why-grid {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 
-    gap:30px;
+    max-width: 1300px;
 
-    max-width:1300px;
-
-    margin:auto;
+    margin: auto;
 
 }
 
@@ -58,61 +58,108 @@
    Card
 =========================== */
 
-.why-card{
+.why-card {
 
-    background:white;
+    background: #fff;
 
-    padding:35px 25px;
+    padding: 35px 28px;
 
-    border-radius:18px;
+    border-radius: 22px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
 
-    transition:.3s;
+    border: 1px solid #f2f2f2;
 
-}
+    transition: .35s ease;
 
-.why-card:hover{
-
-    transform:translateY(-8px);
+    cursor: pointer;
 
 }
 
-.why-icon{
+.why-card:hover {
 
-    font-size:55px;
+    transform: translateY(-10px);
 
-    margin-bottom:20px;
+    box-shadow: 0 20px 45px rgba(141, 74, 35, .18);
+
+    border-color: #8d4a23;
+}
+
+.why-icon {
+
+    font-size: 58px;
+
+    transition: .3s;
+    margin-bottom: 20px;
 
 }
 
-.why-card h2{
+.why-card:hover .why-icon {
 
-    color:#8d4a23;
-
-    margin-bottom:15px;
+    transform: scale(1.15) rotate(5deg);
 
 }
 
-.why-card p{
+.why-card h2 {
 
-    color:#555;
+    color: #8d4a23;
 
-    line-height:1.7;
+    margin-bottom: 15px;
 
 }
+
+.why-card p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+
+.why-card {
+
+    animation: fadeCard .7s ease;
+
+}
+
+@keyframes fadeCard {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+
+
 
 /* ===========================
    Tablet
 =========================== */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-.why-grid{
+    .why-grid {
 
-grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-}
+    }
 
 }
 
@@ -120,18 +167,24 @@ grid-template-columns:repeat(2,1fr);
    Mobile
 =========================== */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.why-grid{
+    .why-section {
 
-grid-template-columns:1fr;
+        padding: 70px 18px;
 
-}
+    }
 
-.why-section h1{
+    .why-grid {
 
-font-size:34px;
+        grid-template-columns: 1fr;
 
-}
+    }
+
+    .why-section h1 {
+
+        font-size: 34px;
+
+    }
 
 }
