@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Style/Hero.css";
+import '../Style/Hero.css'
 
 const Hero = () => {
   return (
@@ -9,8 +10,8 @@ const Hero = () => {
       <div className="hero-box hero-left"></div>
 
       <div className="hero-content">
-        <h1>
-          Design Your Own <span>Branded Paper Cups</span>
+        <h1 style={{color:'#222'}}>
+           Design Your Own <span>Branded Paper Cups</span>
         </h1>
 
         <p>

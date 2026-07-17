@@ -1,20 +1,66 @@
-import React from 'react'
+import React from 'react';
+import '../Style/OrderSummary.css';
 
-const OrderSummary = ({cupSize ,cupShape ,quantity ,paperQuality}) => {
-  
-  // const totalprice = sizerate()+ shape()+ qunatitycup() + paperQuality()
+const OrderSummary = ({
+  cupSize,
+  cupShape,
+  quantity,
+  paperQuality,
+}) => {
+
+  // Base price according to cup size
+  const sizePrice = {
+    "150ml": 3,
+    "250ml": 4,
+    "350ml": 5,
+    "500ml": 6,
+  };
+
+  // Extra charge for paper quality
+  const qualityPrice = {
+    "Standard": 0,
+    "Premium": 1,
+    "Eco Friendly": 2,
+  };
+
+  const pricePerCup =
+    (sizePrice[cupSize] || 0) +
+    (qualityPrice[paperQuality] || 0);
+
+  const totalPrice = pricePerCup * Number(quantity);
+
   return (
-    <div style={{display:'flex',flexDirection:'column',paddingBottom:'15px',padding:'15px',borderBottom:'2px solid #A5B29A',gap:'10px'
-    }}>
+    <div className="order-summary">
 
-    <div style={{display:'flex',justifyContent:'space-between'}}><p>Size of Cup:-</p> <p>{cupSize}</p> </div>
-    <div style={{display:'flex',justifyContent:'space-between'}}><p>Shape of Cup:-</p> <p>{cupShape}</p> </div>
-    <div style={{display:'flex',justifyContent:'space-between'}}><p>Paper Quality:-</p> <p>{paperQuality}</p></div>
-    <div style={{display:'flex',justifyContent:'space-between'}}><p>Qunatity You Chosse:-</p> <p>{quantity}</p> </div>
-    <div style={{display:'flex',justifyContent:'space-between', borderTop:'2px solid black'}}><h2>Total Price :- </h2> <h2>$ 150.00</h2> </div>
+      <div className="summary-row">
+        <p>Cup Size</p>
+        <p>{cupSize}</p>
+      </div>
+
+      <div className="summary-row">
+        <p>Cup Shape</p>
+        <p>{cupShape}</p>
+      </div>
+
+      <div className="summary-row">
+        <p>Paper Quality</p>
+        <p>{paperQuality}</p>
+      </div>
+
+      <div className="summary-row">
+        <p>Quantity</p>
+        <p>{quantity}</p>
+      </div>
+
+      <hr />
+
+      <div className="summary-total">
+        <h2>Total Price</h2>
+        <h2>₹ {totalPrice}</h2>
+      </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default OrderSummary
+export default OrderSummary;

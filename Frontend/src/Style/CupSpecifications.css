@@ -1,50 +1,59 @@
- .custom-select-wrapper {
-    font-family: system-ui, -apple-system, sans-serif;
-    max-width: 350px;
-    margin: 5px 0;
-  }
-  .select-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 6px;
-  }
-  .select-container {
-    position: relative;
+.cup-specifications {
     display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #A5B29A;
+}
+
+.custom-select-wrapper {
     width: 100%;
-  }
-  .select-container select {
+}
+
+.select-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.select-container {
+    position: relative;
     width: 100%;
-    padding: 12px 40px 12px 16px;
-    font-size: 16px;
-    color: #1f2937;
-    background-color: #ffffff;
-    border: 2px solid #e5e7eb;
-    border-radius: 8px;
-    appearance: none; /* Hides default arrow */
-    -webkit-appearance: none;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    appearance: none;
     cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .select-container select:focus {
+    transition: .3s;
+}
+
+.select-container select:hover {
+    border-color: #8d4a23;
+}
+
+.select-container select:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
-  }
-  .select-arrow {
+    border-color: #8d4a23;
+    box-shadow: 0 0 10px rgba(141,74,35,.25);
+}
+
+.select-arrow {
     position: absolute;
-    right: 16px;
+    right: 18px;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 6px;
-    background-color: #6b7280;
-    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #8d4a23;
     pointer-events: none;
-  }
-  .select-container select:focus + .select-arrow {
-    background-color: #2563eb;
-    transform: translateY(-50%) rotate(180deg);
-  }
+}

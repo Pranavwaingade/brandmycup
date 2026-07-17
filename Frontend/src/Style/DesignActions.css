@@ -1,27 +1,51 @@
-
-.button div{
-    width:200px ;
-    height: 55px;
-    background-color: #8d4a23b4;
-    text-align: center;
-    align-content: center;
-    border-radius: 30px;
+.design-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
 }
 
-.button div:hover{
-    border: 1px solid #8d4a23b4;
-    background-color: white;
+.action-link{
+    text-decoration:none;
 }
 
-.abutton{
-    height: 5%;
-    width: 200px;
-    text-decoration: none;
-    color: white; 
-    gap: 5px;
-    background-color: #8d4a2300;
+.action-btn{
+    width:180px;
+    height:50px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.abutton:hover{
-    color: #8d4a23b4;
+.preview-btn{
+    background:#ffffff;
+    color:#8d4a23;
+    border:2px solid #8d4a23;
+}
+
+.preview-btn:hover{
+    background:#8d4a23;
+    color:#fff;
+}
+
+.cart-btn{
+    background:#8d4a23;
+    color:#fff;
+}
+
+.cart-btn:hover{
+    background:#6f391a;
+}
+
+.save-btn{
+    background:#A5B29A;
+    color:#fff;
+}
+
+.save-btn:hover{
+    background:#7f8d75;
 }

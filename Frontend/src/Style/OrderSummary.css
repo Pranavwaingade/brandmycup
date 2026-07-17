@@ -1,0 +1,36 @@
+.order-summary{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    border-bottom:2px solid #A5B29A;
+    background:#fafafa;
+    border-radius:12px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+}
+
+.summary-row p{
+    margin:0;
+}
+
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#8d4a23;
+}
+
+.summary-total h2{
+    margin:0;
+}
+
+.order-summary hr{
+    border:none;
+    border-top:2px solid #ddd;
+}

@@ -1,16 +1,27 @@
-import React from 'react'
-import '../Style/DesignActions.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../Style/DesignActions.css';
 
 const DesignActions = () => {
   return (
-    <div style={{display:'flex',padding:'15px'}}>
-      <div className="button">
-            <div><a className='abutton' href="">Preview Design</a></div>
-            <div><a className='abutton' href="/Cart">Add To Cart</a></div>
-            <div><a className='abutton' href="">Save Design</a></div>
-          </div>
-    </div>
-  )
-}
+    <div className="design-actions">
 
-export default DesignActions
+      <button className="action-btn preview-btn">
+        Preview Design
+      </button>
+
+      <Link to="/cart" className="action-link">
+        <button className="action-btn cart-btn">
+          Add To Cart
+        </button>
+      </Link>
+
+      <button className="action-btn save-btn">
+        Save Design
+      </button>
+
+    </div>
+  );
+};
+
+export default DesignActions;

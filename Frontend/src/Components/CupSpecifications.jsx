@@ -1,66 +1,99 @@
-import React from 'react'
-import '../Style/CupSpecifications.css'
+import React from 'react';
+import '../Style/CupSpecifications.css';
 
-const CupSpecifications = ({setCupSize,cupSize ,cupShape,quantity,paperQuality,setCupShape ,SetPaperQuality,setQuantity}) => {
+const CupSpecifications = ({
+  cupSize,
+  setCupSize,
+  cupShape,
+  setCupShape,
+  paperQuality,
+  setPaperQuality,
+  quantity,
+  setQuantity,
+}) => {
   return (
-    <div style={{display:'flex',flexDirection:'column' , gap:'px', paddingBottom:'15px',borderBottom:'2px solid #A5B29A'}}>
-      <div className="custom-select-wrapper">
-        <label htmlFor="modern-select" className="select-label">Choose an Cup Size</label>
-        <div className="select-container">
-          <select id="modern-select" name="options" value={cupSize} onChange={(e)=>setCupSize(e.target.value)} >
-            <option value="" disabled selected hidden>Select on the list...</option>
-            <option value="150ml"> 150ml </option>
-            <option value="250ml"> 250ml </option>
-            <option value="350ml"> 350ml </option>
-            <option value="500ml"> 500ml </option>
-          </select>
-          <div className="select-arrow"></div>
-        </div>
-      </div>
-      <div className="custom-select-wrapper">
-        <label htmlFor="modern-select" className="select-label">Choose an Cup shape</label>
-        <div className="select-container">
-          <select id="modern-select" name="options" value={cupShape} onChange={(e)=>{setCupShape(e.target.value)}}>
-            <option value="" disabled selected hidden>Select on the list...</option>
-            <option value="Cylindrical"> Cylindrical</option>
-            <option value="FlaredRim">  Flared Rim </option>
-            <option value="widebowl"> Wide Bowl</option>
-            <option value="thicktapered"> Thick Tapered </option>
+    <div className="cup-specifications">
 
-          </select>
-          <div className="select-arrow"></div>
-        </div>
-      </div>
+      {/* Cup Size */}
       <div className="custom-select-wrapper">
-        <label htmlFor="modern-select" className="select-label">Choose an Paper Quality</label>
-        <div className="select-container">
-          <select id="modern-select" name="options" value={paperQuality} onChange={(e)=>{SetPaperQuality(e.target.value)}}>
-            <option value="" disabled selected hidden>Select on the list...</option>
-            <option value="Standard"> Standard</option>
-            <option value="Premium">  Premium </option>
-            <option value="EcoFriendly">  Eco Friendly</option>
+        <label className="select-label">Choose Cup Size</label>
 
+        <div className="select-container">
+          <select
+            value={cupSize}
+            onChange={(e) => setCupSize(e.target.value)}
+          >
+            <option value="150ml">150 ml</option>
+            <option value="250ml">250 ml</option>
+            <option value="350ml">350 ml</option>
+            <option value="500ml">500 ml</option>
           </select>
+
           <div className="select-arrow"></div>
         </div>
       </div>
+
+      {/* Shape */}
       <div className="custom-select-wrapper">
-        <label htmlFor="modern-select" className="select-label">Choose Quantity</label>
+        <label className="select-label">Choose Cup Shape</label>
+
         <div className="select-container">
-          <select id="modern-select" name="options" value={quantity} onChange={(e)=>{setQuantity(e.target.value)}}>
-            <option value="" disabled selected hidden>Select on the list...</option>
+          <select
+            value={cupShape}
+            onChange={(e) => setCupShape(e.target.value)}
+          >
+            <option value="Cylindrical">Cylindrical</option>
+            <option value="Flared Rim">Flared Rim</option>
+            <option value="Wide Bowl">Wide Bowl</option>
+            <option value="Thick Tapered">Thick Tapered</option>
+          </select>
+
+          <div className="select-arrow"></div>
+        </div>
+      </div>
+
+      {/* Paper Quality */}
+      <div className="custom-select-wrapper">
+        <label className="select-label">Paper Quality</label>
+
+        <div className="select-container">
+          <select
+            value={paperQuality}
+            onChange={(e) => setPaperQuality(e.target.value)}
+          >
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+            <option value="Eco Friendly">Eco Friendly</option>
+          </select>
+
+          <div className="select-arrow"></div>
+        </div>
+      </div>
+
+      {/* Quantity */}
+      <div className="custom-select-wrapper">
+        <label className="select-label">Quantity</label>
+
+        <div className="select-container">
+          <select
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+          >
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
             <option value="100">100</option>
-            <option value="75"> 75</option>
-            <option value="35"> 50</option>
-            <option value="30"> 30</option>
-
+            <option value="250">250</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
           </select>
+
           <div className="select-arrow"></div>
         </div>
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default CupSpecifications
+export default CupSpecifications;
