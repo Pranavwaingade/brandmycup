@@ -23,6 +23,7 @@ const QuantitySelector = () => {
       <div className="quantity-box">
 
         <button
+          type='button'
           className="qty-btn"
           onClick={handleMinus}
         >
@@ -34,6 +35,7 @@ const QuantitySelector = () => {
         </span>
 
         <button
+          type='button'
           className="qty-btn"
           onClick={handleAdd}
         >

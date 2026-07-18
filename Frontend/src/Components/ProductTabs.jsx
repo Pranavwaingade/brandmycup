@@ -10,21 +10,21 @@ const ProductTabs = () => {
 
       <div className="tab-header">
 
-        <button
+        <button type="button"
           className={activeTab === "description" ? "active" : ""}
           onClick={() => setActiveTab("description")}
         >
           Description
         </button>
 
-        <button
+        <button type="button"
           className={activeTab === "specification" ? "active" : ""}
           onClick={() => setActiveTab("specification")}
         >
           Specifications
         </button>
 
-        <button
+        <button type="button"
           className={activeTab === "review" ? "active" : ""}
           onClick={() => setActiveTab("review")}
         >
@@ -69,15 +69,17 @@ const ProductTabs = () => {
           <div>
 
             <div className="review-box">
-              ⭐⭐⭐⭐⭐
+              <h4>Rahul</h4>
+              <p>⭐⭐⭐⭐⭐</p>
               <p>Very good quality.</p>
-              <span>- Rahul</span>
+              
             </div>
 
             <div className="review-box">
-              ⭐⭐⭐⭐☆
+              <h4>Priya</h4>
+              <p>⭐⭐⭐⭐☆</p>
               <p>Printing quality is amazing.</p>
-              <span>- Priya</span>
+              
             </div>
 
           </div>

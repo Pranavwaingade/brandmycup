@@ -1,102 +1,123 @@
-.action{
-    display:flex;
-    gap:15px;
-    width:100%;
-    align-items:center;
-    flex-wrap:wrap;
+.action {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.action button{
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
-    font-size:1rem;
-    font-weight:600;
+.action button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 /* Customize Button */
 
-.custom-btn{
-    flex:1;
-    min-width:180px;
-    height:50px;
-    background:#8d4a23;
-    color:white;
+.custom-btn {
+    flex: 1;
+    min-width: 180px;
+    height: 50px;
+    background: #8d4a23;
+    color: white;
+}
+
+.custom-btn,
+.cart-btn,
+.wishlist-btn {
+    height: 55px;
 }
 
 .custom-btn:hover{
-    background:#87947b;
+    background:#6f3818;
 }
 
 /* Cart Button */
 
-.cart-btn{
-    flex:1;
-    min-width:160px;
-    height:50px;
-    background:white;
-    color:#8d4a23;
-    border:2px solid #8d4a23 !important;
+.cart-btn {
+    flex: 1;
+    min-width: 160px;
+    height: 50px;
+    background: white;
+    color: #8d4a23;
+    border: 2px solid #8d4a23 !important;
 }
 
 .cart-btn:hover{
     background:#8d4a23;
-    color:white;
+    color:#fff;
 }
 
 /* Wishlist */
 
-.wishlist-btn{
-    width:55px;
-    height:50px;
-    background:white;
-    border:2px solid #8d4a23 !important;
-    color:#8d4a23;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.wishlist-btn {
+    width: 60px;
+    min-width: 60px;
+    height: 50px;
+    background: white;
+    border: 2px solid #8d4a23 !important;
+    color: #8d4a23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wishlist-btn:hover{
     background:#8d4a23;
-    color:white;
+    color:#fff;
+}
+
+.action button {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.action button:hover {
+    transform: translateY(-3px);
+}
+
+.action button:active {
+    transform: scale(.97);
 }
 
 /* Tablet */
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-.action{
-    flex-direction:column;
-}
+    .action {
+        flex-direction: column;
+    }
 
-.custom-btn,
-.cart-btn{
-    width:100%;
-}
+    .custom-btn,
+    .cart-btn {
+        width: 100%;
+    }
 
-.wishlist-btn{
-    width:100%;
-}
+    .wishlist-btn {
+        width: 100%;
+    }
 
 }
 
 /* Mobile */
 
-@media (max-width:480px){
+@media(max-width:768px) {
 
-.action button{
-    font-size:.9rem;
-}
+    .action {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-.custom-btn,
-.cart-btn{
-    height:45px;
-}
+    .custom-btn,
+    .cart-btn {
+        width: 100%;
+    }
 
-.wishlist-btn{
-    height:45px;
-}
+    .wishlist-btn {
+        width: 60px;
+        align-self: center;
+    }
 
 }

@@ -10,8 +10,14 @@
 
 .breadcrumb{
     width:90%;
-    font-size:18px;
-    color:#87947b;
+    font-size:17px;
+    color:#777;
+    font-weight:500;
+}
+
+.breadcrumb span{
+    color:#8d4a23;
+    font-weight:600;
 }
 
 .product-container{
@@ -24,6 +30,7 @@
 
 .related-section{
     width:90%;
+      max-width:1400px;
     margin-bottom:60px;
 }
 

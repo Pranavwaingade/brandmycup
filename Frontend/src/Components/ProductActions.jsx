@@ -16,8 +16,8 @@ const ProductActions = () => {
         Customize Now
       </button>
 
-      <button className="cart-btn">
-        Add To Cart
+      <button className="cart-btn" type="button">
+        🛒Add To Cart
       </button>
 
       <button className="wishlist-btn">

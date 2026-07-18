@@ -1,73 +1,85 @@
-.quantity{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top:10px;
+margin-bottom:10px;
 }
 
-.quantity h3{
-    color:#8d4a23;
-    font-size:1.2rem;
+.quantity h3 {
+    color: #8d4a23;
+    font-size: 1.2rem;
 }
 
-.quantity-box{
-    display:flex;
-    align-items:center;
-    border:2px solid #ddd;
-    border-radius:10px;
-    overflow:hidden;
+.quantity-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
 }
 
-.qty-btn{
-    width:45px;
-    height:45px;
-    border:none;
-    background:#8d4a23;
-    color:white;
-    font-size:1.4rem;
-    cursor:pointer;
-    transition:.3s;
+.qty-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #8d4a23;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.qty-btn:hover{
-    background:#87947b;
+.qty-btn:hover {
+    background: #6f3818;
 }
 
-.qty-value{
-    width:60px;
-    text-align:center;
-    font-size:1.2rem;
-    font-weight:600;
+.qty-btn:active {
+    transform: scale(.95);
+}
+
+.qty-value {
+    width: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
 }
 
 /* Tablet */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.quantity{
-    justify-content:center;
-}
+    .quantity {
+        justify-content: center;
+    }
 
 }
 
 /* Mobile */
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
-.quantity{
-    flex-direction:column;
-    align-items:center;
-}
+    .quantity {
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.qty-btn{
-    width:40px;
-    height:40px;
-}
+    .quantity h3 {
+        font-size: 18px;
+    }
 
-.qty-value{
-    width:50px;
-    font-size:1rem;
-}
+    .qty-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .qty-value {
+        width: 55px;
+    }
 
 }

@@ -14,7 +14,7 @@ const ProductDetails = () => {
       <div className="productdetails">
 
         <div className="breadcrumb">
-          Home / Products / Tea Paper Cup
+          Home / Products / <span> Tea Paper Cup</span>
         </div>
 
         <div className="product-container">
