@@ -2,33 +2,34 @@
    Product Card
 =========================== */
 
-.product-card{
+.product-card {
 
-    width:100%;
+    width: 100%;
+    height: 100%;
+    background: white;
 
-    background:white;
+    border: 1px solid #e5e5e5;
 
-    border:1px solid #e5e5e5;
+    border-radius: 18px;
 
-    border-radius:18px;
+    overflow: hidden;
 
-    overflow:hidden;
+    transition: .3s;
 
-    transition:.3s;
+    display: flex;
 
-    display:flex;
+    flex-direction: column;
 
-    flex-direction:column;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 }
 
-.product-card:hover{
+.product-card:hover {
 
-    transform:translateY(-8px);
+    transform: translateY(-10px);
 
-    box-shadow:0 12px 25px rgba(0,0,0,.15);
+    border-color: #8d4a23;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
 
 }
 
@@ -36,33 +37,32 @@
    Image
 =========================== */
 
-.product-image{
+.product-image {
 
-    width:100%;
+    width: 100%;
 
-    height:260px;
+    height: 260px;
 
-    overflow:hidden;
+    overflow: hidden;
+    padding: 20px;
+    background: linear-gradient(135deg, #fdfdfd, #f6f6f6);
+}
 
-    background:#fafafa;
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: .4s;
 
 }
 
-.product-image img{
+.product-card:hover img {
 
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    transition:.4s;
-
-}
-
-.product-card:hover img{
-
-    transform:scale(1.08);
+    transform: scale(1.08);
 
 }
 
@@ -70,43 +70,45 @@
    Details
 =========================== */
 
-.product-details{
+.product-details {
 
-    padding:20px;
+    padding: 20px;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:12px;
-
-}
-
-.category{
-
-    color:#87947b;
-
-    font-size:14px;
-
-    font-weight:600;
+    gap: 12px;
 
 }
 
-.product-details h2{
+.category {
 
-    font-size:24px;
+    color: #87947b;
 
-    color:black;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+    font-weight: 600;
 
 }
 
-.product-details p{
+.product-details h2 {
 
-    color:#555;
+    font-size: 24px;
 
-    line-height:1.6;
+    color: black;
 
-    min-height:55px;
+}
+
+.product-details p {
+
+    color: #555;
+
+    line-height: 1.6;
+
+    min-height: 55px;
 
 }
 
@@ -114,15 +116,15 @@
    Info
 =========================== */
 
-.product-info{
+.product-info {
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    font-size:16px;
+    font-size: 16px;
 
-    color:#666;
+    color: #666;
 
 }
 
@@ -130,19 +132,24 @@
    Price
 =========================== */
 
-.price{
+.price {
 
-    color:#8d4a23;
+    color: #8d4a23;
+    display: flex;
 
-    font-size:28px;
+    align-items: end;
+
+    gap: 5px;
+
+    font-size: 28px;
 
 }
 
-.price span{
+.price span {
 
-    font-size:16px;
+    font-size: 16px;
 
-    color:#666;
+    color: #666;
 
 }
 
@@ -150,31 +157,33 @@
    Button
 =========================== */
 
-.view-btn{
+.view-btn {
 
-    width:100%;
+    width: 100%;
 
-    text-align:center;
+    text-align: center;
 
-    padding:14px;
+    padding: 14px;
 
-    border-radius:10px;
+    border-radius: 10px;
 
-    background:#8d4a23;
+    background: #8d4a23;
 
-    color:white;
+    color: white;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    transition:.3s;
+    transition: .3s;
 
-    font-weight:600;
+    font-weight: 600;
 
 }
 
-.view-btn:hover{
+.view-btn:hover {
 
-    background:#87947b;
+    background: #6d7a63;
+
+    transform: translateY(-2px);
 
 }
 
@@ -182,19 +191,19 @@
    Tablet
 =========================== */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.product-image{
+    .product-image {
 
-height:220px;
+        height: 220px;
 
-}
+    }
 
-.product-details h2{
+    .product-details h2 {
 
-font-size:22px;
+        font-size: 22px;
 
-}
+    }
 
 }
 
@@ -202,30 +211,30 @@ font-size:22px;
    Mobile
 =========================== */
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
-.product-image{
+    .product-image {
 
-height:180px;
+        height: 180px;
 
-}
+    }
 
-.product-details{
+    .product-details {
 
-padding:15px;
+        padding: 15px;
 
-}
+    }
 
-.product-details h2{
+    .product-details h2 {
 
-font-size:20px;
+        font-size: 20px;
 
-}
+    }
 
-.price{
+    .price {
 
-font-size:24px;
+        font-size: 24px;
 
-}
+    }
 
 }
