@@ -12,6 +12,7 @@ const OrderSummary = () => {
     const delivery = 0;
     const gst = ((subtotal - discount) * 18) / 100;
     const total = subtotal - discount + gst + delivery;
+    const items = 4;
 
     return (
         <div className="summary-card">
@@ -19,7 +20,7 @@ const OrderSummary = () => {
             <div className="summary-header">
 
                 <h2>
-                    <img src={cartbox} alt="" />
+                    <img src={cartbox} alt="Order Summary Icon" />
                     Order Summary
                 </h2>
 
@@ -27,17 +28,17 @@ const OrderSummary = () => {
 
             <div className="summary-row">
                 <span>Items</span>
-                <span>4</span>
+                <span>{items}</span>
             </div>
 
             <div className="summary-row">
                 <span>Subtotal</span>
-                <span>₹ {subtotal}</span>
+                <span>₹ {subtotal.toLocaleString("en-IN")}</span>
             </div>
 
             <div className="summary-row">
                 <span>Discount</span>
-                <span>- ₹ {discount}</span>
+                <span>- ₹ {discount.toLocaleString("en-IN")}</span>
             </div>
 
             <div className="summary-row">
@@ -70,7 +71,7 @@ const OrderSummary = () => {
 
             <button
                 className="checkout-btn"
-                onClick={() => navigate("/Cart/checkout")}
+                onClick={() => navigate("/cart/checkout")}
             >
                 Proceed To Checkout
             </button>

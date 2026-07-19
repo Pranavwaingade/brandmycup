@@ -86,13 +86,14 @@ const CartItem = () => {
 
             <h3>Total</h3>
 
-            <h2>₹ {product.totalPrice}</h2>
-
+            <h2>
+              ₹{product.totalPrice.toLocaleString("en-IN")}
+            </h2>
           </div>
 
-          <div className="delete-box">
+          <div className="delete-btn">
 
-            🗑️
+            🗑️ Remove
 
           </div>
 

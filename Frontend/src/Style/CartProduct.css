@@ -1,14 +1,14 @@
 .cart-products{
     width:100%;
     background:#fff;
+    border:1px solid #eee;
     border-radius:20px;
     padding:20px;
     display:flex;
     flex-direction:column;
     gap:20px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-
 /* Tablet */
 
 @media (max-width:992px){

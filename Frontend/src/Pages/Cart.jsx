@@ -3,12 +3,12 @@ import '../Style/Cart.css';
 import Navbar from '../Components/Navbar';
 import CartProducts from '../Components/CartProducts';
 import OrderSummary from '../Components/cartOrderSummary';
-import Reletedgrid from '../Components/Reletedgrid';
+import ReletedGrid from '../Components/Reletedgrid';
 import Emptycart from '../Components/Emptycart';
 import Footer from '../Components/Footer';
 
 const Cart = () => {
-    const cartitem = 1;
+    const cartItems = [1,2];
 
     return (
         <>
@@ -18,12 +18,14 @@ const Cart = () => {
 
                 <div className="cart-header">
                     <h1>Shopping Cart</h1>
-                    <p>You have 4 items in your cart.</p>
+                    <p>
+                        You have {cartItems.length} item{cartItems.length !== 1 ? "s" : ""} in your cart.
+                    </p>
                 </div>
 
                 <div className="cart-container">
 
-                    {cartitem === 0 ? (
+                    {cartItems === 0 ? (
                         <Emptycart />
                     ) : (
                         <>
@@ -42,7 +44,7 @@ const Cart = () => {
                 <div className="related-section">
                     <h2>You May Also Like</h2>
 
-                    <Reletedgrid />
+                    <ReletedGrid />
                 </div>
 
             </div>
