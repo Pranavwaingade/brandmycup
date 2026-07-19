@@ -1,0 +1,150 @@
+/* ===========================
+   Empty Wishlist
+=========================== */
+
+.empty-wishlist{
+    width:100%;
+    min-height:500px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+.empty-card{
+    width:100%;
+    max-width:550px;
+
+    background:#fff;
+
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+
+    padding:50px 35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.empty-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.wishlist-icon{
+    font-size:80px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.empty-card h1{
+    color:#8d4a23;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.empty-card p{
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.shop-btn{
+    padding:15px 35px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#8d4a23;
+    color:#fff;
+
+    font-size:17px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.shop-btn:hover{
+    background:#87947b;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:768px){
+
+.empty-card{
+    padding:40px 25px;
+}
+
+.empty-card h1{
+    font-size:30px;
+}
+
+.empty-card p{
+    font-size:16px;
+}
+
+.wishlist-icon{
+    font-size:70px;
+}
+
+.shop-btn{
+    width:100%;
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.empty-card{
+    padding:30px 20px;
+}
+
+.empty-card h1{
+    font-size:24px;
+}
+
+.empty-card p{
+    font-size:15px;
+}
+
+.wishlist-icon{
+    font-size:60px;
+}
+
+.shop-btn{
+    font-size:16px;
+    padding:14px;
+}
+
+}

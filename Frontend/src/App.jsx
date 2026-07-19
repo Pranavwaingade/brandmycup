@@ -8,6 +8,7 @@ import ProductDetails from "./Pages/ProductDetails";
 import CustomizeCup from "./Pages/CustomizeCup";
 import Cart from "./Pages/Cart"
 import Checkout from "./Pages/Checkout";
+import Wishlist from "./Pages/Wishlist";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/customizeCup" element={<CustomizeCup/>} />
         <Route path="/Cart" element={<Cart/>} />
         <Route path="/Cart/checkout" element={<Checkout/>}/>
+        <Route path="/wishlist" element={<Wishlist/>}/>
         
       </Routes>
     </BrowserRouter>
