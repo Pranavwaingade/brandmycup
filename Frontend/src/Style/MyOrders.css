@@ -1,0 +1,134 @@
+/* ===========================
+   My Orders Page
+=========================== */
+
+.myorders-page{
+    width:100%;
+    min-height:100vh;
+    background:#fafafa;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.orders-header{
+    width:100%;
+    min-height:230px;
+
+    padding:120px 20px 60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:linear-gradient(rgba(141,74,35,.88),
+               rgba(141,74,35,.88)),
+               url("../img/bg.webp");
+
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.orders-header h1{
+    font-size:46px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.orders-header p{
+    width:90%;
+    max-width:750px;
+
+    font-size:18px;
+    line-height:1.8;
+
+    color:#f3f3f3;
+}
+
+/* ===========================
+   Orders Container
+=========================== */
+
+.orders-container{
+    width:90%;
+    max-width:1400px;
+
+    margin:50px auto 70px;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.orders-header{
+    min-height:200px;
+    padding:110px 20px 50px;
+}
+
+.orders-header h1{
+    font-size:38px;
+}
+
+.orders-header p{
+    font-size:17px;
+}
+
+.orders-container{
+    width:95%;
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.orders-header{
+    min-height:180px;
+    padding:100px 18px 40px;
+}
+
+.orders-header h1{
+    font-size:32px;
+}
+
+.orders-header p{
+    width:100%;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.orders-container{
+    width:95%;
+    margin:35px auto 50px;
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.orders-header h1{
+    font-size:28px;
+}
+
+.orders-header p{
+    font-size:15px;
+}
+
+.orders-container{
+    width:94%;
+}
+
+}

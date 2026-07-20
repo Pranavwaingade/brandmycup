@@ -1,0 +1,268 @@
+/* ===========================
+   Order Success
+=========================== */
+
+.order-success{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:120px 20px 60px;
+
+    background:#fafafa;
+}
+
+/* ===========================
+   Success Card
+=========================== */
+
+.success-card{
+    width:100%;
+    max-width:700px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:50px 40px;
+
+    text-align:center;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.10);
+
+    transition:.3s;
+}
+
+.success-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   Success Icon
+=========================== */
+
+.success-icon{
+    width:120px;
+    height:120px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    font-size:60px;
+    font-weight:bold;
+
+    box-shadow:0 10px 25px rgba(34,197,94,.35);
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.success-card h1{
+    color:#8d4a23;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   Message
+=========================== */
+
+.success-message{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+
+    margin-bottom:35px;
+}
+
+/* ===========================
+   Order Info
+=========================== */
+
+.order-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+    margin-bottom:35px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 20px;
+
+    border:1px solid #e8e8e8;
+    border-radius:12px;
+
+    background:#fafafa;
+}
+
+.info-row span{
+    color:#666;
+    font-size:17px;
+}
+
+.info-row strong{
+    color:#222;
+    font-size:17px;
+}
+
+.paid{
+    color:#22c55e !important;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.success-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.order-btn,
+.shop-btn{
+
+    min-width:220px;
+
+    padding:15px 25px;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:17px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.order-btn{
+    background:#8d4a23;
+    color:#fff;
+}
+
+.order-btn:hover{
+    background:#6d3517;
+}
+
+.shop-btn{
+    background:#87947b;
+    color:#fff;
+}
+
+.shop-btn:hover{
+    background:#6d7a63;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:768px){
+
+.success-card{
+    padding:40px 25px;
+}
+
+.success-card h1{
+    font-size:30px;
+}
+
+.success-icon{
+    width:100px;
+    height:100px;
+    font-size:50px;
+}
+
+.success-message{
+    font-size:16px;
+}
+
+.info-row{
+    padding:14px 15px;
+}
+
+.info-row span,
+.info-row strong{
+    font-size:15px;
+}
+
+.success-buttons{
+    flex-direction:column;
+}
+
+.order-btn,
+.shop-btn{
+    width:100%;
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.order-success{
+    padding:100px 15px 40px;
+}
+
+.success-card{
+    padding:30px 18px;
+}
+
+.success-card h1{
+    font-size:24px;
+}
+
+.success-icon{
+    width:80px;
+    height:80px;
+    font-size:40px;
+}
+
+.success-message{
+    font-size:15px;
+}
+
+.info-row{
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+}
+
+.info-row span,
+.info-row strong{
+    font-size:14px;
+}
+
+.order-btn,
+.shop-btn{
+    min-width:100%;
+    font-size:16px;
+    padding:14px;
+}
+
+}

@@ -9,6 +9,8 @@ import CustomizeCup from "./Pages/CustomizeCup";
 import Cart from "./Pages/Cart"
 import Checkout from "./Pages/Checkout";
 import Wishlist from "./Pages/Wishlist";
+import OrderSuccess from "./Pages/OrderSuccess";
+import MyOrders from "./Pages/MyOrders";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/Cart" element={<Cart/>} />
         <Route path="/Cart/checkout" element={<Checkout/>}/>
         <Route path="/wishlist" element={<Wishlist/>}/>
+        <Route path="/ordersuccess" element={<OrderSuccess/>}/>
+        <Route path="/orders" element={<MyOrders/>}/>
+        
         
       </Routes>
     </BrowserRouter>
