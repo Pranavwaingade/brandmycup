@@ -1,0 +1,237 @@
+/* ===========================
+   Address Section
+=========================== */
+
+.address-section {
+    width: 100%;
+
+    padding: 28px 35px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.address-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.address-header h2 {
+    margin: 0;
+
+    color: #8d4a23;
+
+    font-size: 24px;
+}
+
+/* ===========================
+   Edit Button
+=========================== */
+
+.edit-address-btn {
+    padding: 9px 16px;
+
+    border: 1px solid #8d4a23;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #8d4a23;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.edit-address-btn:hover {
+    background: #8d4a23;
+
+    color: white;
+}
+
+/* ===========================
+   Address Card
+=========================== */
+
+.address-card {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 14px;
+
+    background: #fafafa;
+}
+
+/* ===========================
+   Address Card Header
+=========================== */
+
+.address-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.address-card-header h3 {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 19px;
+}
+
+.address-type {
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: #fff0e5;
+
+    color: #8d4a23;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* ===========================
+   Address Details
+=========================== */
+
+.address-card p {
+    margin: 8px 0;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+/* ===========================
+   Add Address Button
+=========================== */
+
+.add-address-btn {
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    border: 2px solid #8d4a23;
+
+    border-radius: 9px;
+
+    background: #8d4a23;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.add-address-btn:hover {
+    background: #6d3517;
+
+    border-color: #6d3517;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .address-section {
+        padding: 25px;
+    }
+
+    .address-header h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 600px) {
+
+    .address-section {
+        padding: 20px;
+    }
+
+    .address-header {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .address-header h2 {
+        font-size: 19px;
+    }
+
+    .address-card {
+        padding: 18px;
+    }
+
+    .address-card-header h3 {
+        font-size: 17px;
+    }
+
+    .address-card p {
+        font-size: 14px;
+    }
+
+    .add-address-btn {
+        width: 100%;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .address-card-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .edit-address-btn {
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+}

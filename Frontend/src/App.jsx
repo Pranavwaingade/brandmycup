@@ -17,6 +17,8 @@ import OrderSuccess from "./Pages/OrderSuccess";
 import MyOrders from "./Pages/MyOrders";
 import OrderDetails from "./Pages/OrderDetails";
 
+import Profile from "./Pages/Profile";
+
 
 function App() {
 
@@ -110,6 +112,12 @@ function App() {
           path="/orderdetails/:id"
           element={<OrderDetails />}
         />
+        
+        <Route
+          path="/profile"
+          element={<Profile/>}
+        />
+        
 
       </Routes>
 

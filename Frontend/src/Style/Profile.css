@@ -1,0 +1,165 @@
+/* ===========================
+   Profile Page
+=========================== */
+
+.profile-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fafafa;
+}
+
+/* ===========================
+   Page Header
+=========================== */
+
+.profile-page-header {
+    width: 100%;
+    min-height: 220px;
+
+    padding: 90px 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #8d4a23,
+        #b77a4d
+    );
+}
+
+.profile-page-header h1 {
+    color: #fff;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+}
+
+.profile-page-header p {
+    color: #f5f5f5;
+
+    font-size: 18px;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.profile-container {
+    width: min(90%, 1200px);
+
+    margin: 50px auto 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* ===========================
+   Common Card Style
+=========================== */
+
+.profile-container > * {
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+    animation: profileFadeIn .5s ease;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes profileFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .profile-container {
+        width: 95%;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .profile-page-header {
+        min-height: 180px;
+
+        padding-top: 80px;
+    }
+
+    .profile-page-header h1 {
+        font-size: 32px;
+    }
+
+    .profile-page-header p {
+        font-size: 16px;
+    }
+
+    .profile-container {
+        width: 95%;
+
+        margin: 30px auto 60px;
+
+        gap: 20px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .profile-page-header h1 {
+        font-size: 28px;
+    }
+
+    .profile-page-header p {
+        font-size: 14px;
+    }
+
+    .profile-container {
+        width: 92%;
+    }
+
+}

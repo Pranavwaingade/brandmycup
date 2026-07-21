@@ -1,0 +1,191 @@
+/* ===========================
+   Personal Information Card
+=========================== */
+
+.personal-info-card {
+    width: 100%;
+
+    padding: 28px 35px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.personal-info-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.personal-info-header h2 {
+    color: #8d4a23;
+
+    font-size: 24px;
+
+    margin: 0;
+}
+
+/* ===========================
+   Edit Button
+=========================== */
+
+.edit-info-btn {
+    padding: 9px 16px;
+
+    border: 1px solid #8d4a23;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #8d4a23;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.edit-info-btn:hover {
+    background: #8d4a23;
+
+    color: white;
+}
+
+/* ===========================
+   Information Grid
+=========================== */
+
+.personal-info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px 40px;
+
+    padding-top: 25px;
+}
+
+/* ===========================
+   Info Item
+=========================== */
+
+.info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+}
+
+.info-label {
+    color: #888;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+.info-item p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .personal-info-card {
+        padding: 25px;
+    }
+
+    .personal-info-header h2 {
+        font-size: 21px;
+    }
+
+    .personal-info-grid {
+        gap: 18px;
+
+        padding-top: 20px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 600px) {
+
+    .personal-info-card {
+        padding: 20px;
+    }
+
+    .personal-info-header h2 {
+        font-size: 19px;
+    }
+
+    .personal-info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .info-item p {
+        font-size: 15px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .personal-info-header {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .personal-info-header h2 {
+        font-size: 18px;
+    }
+
+    .edit-info-btn {
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+}

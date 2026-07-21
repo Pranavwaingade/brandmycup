@@ -1,0 +1,215 @@
+/* ===========================
+   Profile Header Card
+=========================== */
+
+.profile-header-card {
+    width: 100%;
+
+    padding: 28px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+/* ===========================
+   Profile Image
+=========================== */
+
+.profile-image-box {
+    width: 110px;
+
+    height: 110px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #8d4a23;
+
+    background: #f5f5f5;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.profile-image-box img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* ===========================
+   User Information
+=========================== */
+
+.profile-user-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.profile-user-info h2 {
+    color: #333;
+
+    font-size: 26px;
+
+    margin: 0;
+}
+
+.profile-user-info p {
+    color: #777;
+
+    font-size: 16px;
+
+    margin: 0;
+}
+
+/* ===========================
+   Member Badge
+=========================== */
+
+.member-badge {
+    width: fit-content;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #fff3e8;
+
+    color: #8d4a23;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* ===========================
+   Edit Button
+=========================== */
+
+.edit-profile-btn {
+    padding: 13px 22px;
+
+    border: 2px solid #8d4a23;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #8d4a23;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.edit-profile-btn:hover {
+    background: #8d4a23;
+
+    color: white;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .profile-header-card {
+        padding: 25px;
+
+        gap: 18px;
+    }
+
+    .profile-image-box {
+        width: 90px;
+
+        height: 90px;
+    }
+
+    .profile-user-info h2 {
+        font-size: 22px;
+    }
+
+    .profile-user-info p {
+        font-size: 14px;
+    }
+
+    .edit-profile-btn {
+        padding: 11px 16px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 600px) {
+
+    .profile-header-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 18px;
+    }
+
+    .profile-user-info {
+        align-items: center;
+    }
+
+    .profile-image-box {
+        width: 100px;
+
+        height: 100px;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .profile-user-info h2 {
+        font-size: 20px;
+    }
+
+    .profile-user-info p {
+        font-size: 13px;
+    }
+
+    .member-badge {
+        font-size: 12px;
+    }
+
+}

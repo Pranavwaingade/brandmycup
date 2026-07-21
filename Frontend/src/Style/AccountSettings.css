@@ -1,0 +1,232 @@
+/* ===========================
+   Account Settings
+=========================== */
+
+.account-settings {
+    width: 100%;
+
+    padding: 28px 35px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.settings-header {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.settings-header h2 {
+    margin: 0;
+
+    color: #8d4a23;
+
+    font-size: 24px;
+}
+
+/* ===========================
+   Settings List
+=========================== */
+
+.settings-list {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 15px;
+}
+
+/* ===========================
+   Setting Item
+=========================== */
+
+.setting-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 5px;
+
+    border: none;
+
+    border-bottom: 1px solid #eee;
+
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item:hover {
+    padding-left: 12px;
+
+    background: #fffaf6;
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.setting-icon {
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: #fff0e5;
+
+    font-size: 22px;
+}
+
+/* ===========================
+   Information
+=========================== */
+
+.setting-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.setting-info strong {
+    color: #333;
+
+    font-size: 16px;
+}
+
+.setting-info small {
+    color: #888;
+
+    font-size: 13px;
+}
+
+/* ===========================
+   Arrow
+=========================== */
+
+.setting-arrow {
+    color: #8d4a23;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.setting-item:hover .setting-arrow {
+    transform: translateX(5px);
+}
+
+/* ===========================
+   Logout
+=========================== */
+
+.logout-item .setting-icon {
+    background: #ffeaea;
+}
+
+.logout-item .setting-info strong,
+.logout-item .setting-arrow {
+    color: #d32f2f;
+}
+
+.logout-item:hover {
+    background: #fff5f5;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .account-settings {
+        padding: 25px;
+    }
+
+    .settings-header h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 600px) {
+
+    .account-settings {
+        padding: 20px;
+    }
+
+    .settings-header h2 {
+        font-size: 19px;
+    }
+
+    .setting-item {
+        gap: 12px;
+
+        padding: 16px 3px;
+    }
+
+    .setting-icon {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 19px;
+    }
+
+    .setting-info strong {
+        font-size: 15px;
+    }
+
+    .setting-info small {
+        font-size: 12px;
+    }
+
+    .setting-arrow {
+        font-size: 20px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .setting-item:hover {
+        padding-left: 3px;
+    }
+
+}
