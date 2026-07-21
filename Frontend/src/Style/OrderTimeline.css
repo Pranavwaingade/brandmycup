@@ -1,0 +1,230 @@
+/* ===========================
+   Order Timeline
+=========================== */
+
+.order-timeline {
+    width: 100%;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.timeline-header {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-header h2 {
+    color: #8d4a23;
+
+    font-size: 24px;
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline {
+    position: relative;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+/* Vertical Line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 35px;
+
+    bottom: 35px;
+
+    left: 19px;
+
+    width: 3px;
+
+    background: #ddd;
+}
+
+/* ===========================
+   Timeline Item
+=========================== */
+
+.timeline-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    z-index: 1;
+}
+
+/* ===========================
+   Marker
+=========================== */
+
+.timeline-marker {
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ddd;
+
+    color: #777;
+
+    font-weight: 700;
+
+    font-size: 16px;
+}
+
+/* Completed Marker */
+
+.timeline-item.completed .timeline-marker {
+    background: #8d4a23;
+
+    color: #fff;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.timeline-content {
+    flex: 1;
+
+    padding: 4px 0;
+}
+
+.timeline-title-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.timeline-title-row h3 {
+    color: #333;
+
+    font-size: 18px;
+}
+
+.timeline-title-row span {
+    color: #888;
+
+    font-size: 14px;
+}
+
+.timeline-content p {
+    margin-top: 8px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+/* ===========================
+   Completed Text
+=========================== */
+
+.timeline-item.completed
+.timeline-title-row h3 {
+    color: #8d4a23;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .order-timeline {
+        padding: 22px;
+    }
+
+    .timeline-header h2 {
+        font-size: 21px;
+    }
+
+    .timeline-title-row h3 {
+        font-size: 17px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .order-timeline {
+        padding: 18px;
+    }
+
+    .timeline-header h2 {
+        font-size: 19px;
+    }
+
+    .timeline {
+        gap: 24px;
+    }
+
+    .timeline-title-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+    }
+
+    .timeline-title-row h3 {
+        font-size: 16px;
+    }
+
+    .timeline-title-row span {
+        font-size: 13px;
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    }
+
+}

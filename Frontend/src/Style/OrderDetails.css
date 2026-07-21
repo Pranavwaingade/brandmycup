@@ -1,0 +1,169 @@
+/* ===========================
+   Order Details Page
+=========================== */
+
+.order-details-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fafafa;
+}
+
+/* ===========================
+   Page Header
+=========================== */
+
+.order-details-header {
+    width: 100%;
+    min-height: 220px;
+
+    padding: 90px 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #8d4a23,
+        #b77a4d
+    );
+}
+
+.order-details-header h1 {
+    color: #fff;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+}
+
+.order-details-header p {
+    color: #f5f5f5;
+
+    font-size: 18px;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.order-details-container {
+    width: min(90%, 1400px);
+
+    margin: 50px auto 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* ===========================
+   Shipping + Payment Grid
+=========================== */
+
+.order-bottom-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+.order-details-container > * {
+    animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .order-details-container {
+        width: 95%;
+    }
+
+    .order-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .order-details-header {
+        min-height: 180px;
+
+        padding-top: 80px;
+    }
+
+    .order-details-header h1 {
+        font-size: 32px;
+    }
+
+    .order-details-header p {
+        font-size: 16px;
+    }
+
+    .order-details-container {
+        width: 95%;
+
+        margin: 30px auto 60px;
+
+        gap: 20px;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .order-details-header h1 {
+        font-size: 28px;
+    }
+
+    .order-details-header p {
+        font-size: 14px;
+    }
+
+    .order-details-container {
+        width: 92%;
+    }
+
+}

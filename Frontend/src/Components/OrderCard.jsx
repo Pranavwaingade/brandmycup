@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../Style/OrderCard.css";
 
 const OrderCard = ({ order }) => {
+  const navigate = useNavigate();
   return (
     <div className="order-card">
 
@@ -43,7 +45,12 @@ const OrderCard = ({ order }) => {
         >
           {order.status}
         </span>
-
+        <button
+          className="details-btn"
+          onClick={() => navigate(`/orderdetails/${order.id}`)}
+        >
+          View Details
+        </button>
         <button className="track-btn">
           Track Order
         </button>

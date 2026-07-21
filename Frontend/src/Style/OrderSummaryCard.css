@@ -1,0 +1,205 @@
+/* ===========================
+   Order Summary Card
+=========================== */
+
+.order-summary-card {
+    width: 100%;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.order-summary-header {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.order-summary-header h2 {
+    color: #8d4a23;
+
+    font-size: 24px;
+}
+
+/* ===========================
+   Summary Details
+=========================== */
+
+.summary-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 16px;
+}
+
+.summary-row span {
+    color: #666;
+}
+
+.summary-row strong {
+    color: #333;
+}
+
+/* ===========================
+   Discount
+=========================== */
+
+.discount-row strong {
+    color: #2e8b57;
+}
+
+/* ===========================
+   Free Delivery
+=========================== */
+
+.free {
+    color: #2e8b57 !important;
+
+    font-weight: 600;
+}
+
+/* ===========================
+   Final Total
+=========================== */
+
+.final-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.final-total h3 {
+    color: #333;
+
+    font-size: 20px;
+}
+
+.final-total h2 {
+    color: #8d4a23;
+
+    font-size: 28px;
+}
+
+/* ===========================
+   Payment Status
+=========================== */
+
+.payment-status {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #edf8f1;
+
+    color: #2e8b57;
+
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #2e8b57;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .order-summary-card {
+        padding: 22px;
+    }
+
+    .order-summary-header h2 {
+        font-size: 21px;
+    }
+
+    .summary-row {
+        font-size: 15px;
+    }
+
+    .final-total h3 {
+        font-size: 18px;
+    }
+
+    .final-total h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .order-summary-card {
+        padding: 18px;
+    }
+
+    .order-summary-header h2 {
+        font-size: 19px;
+    }
+
+    .summary-row {
+        font-size: 14px;
+    }
+
+    .final-total h3 {
+        font-size: 16px;
+    }
+
+    .final-total h2 {
+        font-size: 22px;
+    }
+
+}

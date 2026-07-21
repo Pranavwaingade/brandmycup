@@ -1,0 +1,175 @@
+/* ===========================
+   Order Details Card
+=========================== */
+
+.order-details-card {
+    width: 100%;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+}
+
+/* ===========================
+   Main Information
+=========================== */
+
+.order-main-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+/* ===========================
+   Individual Info
+=========================== */
+
+.order-info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.order-info-item span {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+.order-info-item strong {
+
+    color: #333;
+
+    font-size: 18px;
+
+}
+
+/* ===========================
+   Status
+=========================== */
+
+.order-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2e8b57 !important;
+
+}
+
+.status-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #2e8b57;
+
+    display: inline-block;
+
+}
+
+/* ===========================
+   Total Amount
+=========================== */
+
+.order-total {
+
+    color: #8d4a23 !important;
+
+    font-size: 22px !important;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .order-main-info {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .order-details-card {
+
+        padding: 22px;
+
+    }
+
+    .order-main-info {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .order-details-card {
+
+        padding: 18px;
+
+    }
+
+    .order-main-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+    .order-info-item strong {
+
+        font-size: 16px;
+
+    }
+
+    .order-total {
+
+        font-size: 20px !important;
+
+    }
+
+}

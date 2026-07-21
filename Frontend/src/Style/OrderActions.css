@@ -1,0 +1,129 @@
+/* ===========================
+   Order Actions
+=========================== */
+
+.order-actions {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+/* ===========================
+   Common Button Style
+=========================== */
+
+.order-actions button {
+    min-height: 48px;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+/* ===========================
+   Invoice Button
+=========================== */
+
+.invoice-btn {
+    background: white;
+
+    color: #8d4a23;
+
+    border: 2px solid #8d4a23;
+}
+
+.invoice-btn:hover {
+    background: #8d4a23;
+
+    color: white;
+}
+
+/* ===========================
+   Track Order Button
+=========================== */
+
+.track-btn {
+    background: #8d4a23;
+
+    color: white;
+
+    border: 2px solid #8d4a23;
+}
+
+.track-btn:hover {
+    background: #6d3517;
+
+    border-color: #6d3517;
+}
+
+/* ===========================
+   Buy Again Button
+=========================== */
+
+.buy-again-btn {
+    background: #87947b;
+
+    color: white;
+
+    border: 2px solid #87947b;
+}
+
+.buy-again-btn:hover {
+    background: #68735f;
+
+    border-color: #68735f;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+    .order-actions {
+        justify-content: center;
+    }
+
+    .order-actions button {
+        flex: 1;
+
+        min-width: 180px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .order-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .order-actions button {
+        width: 100%;
+
+        font-size: 14px;
+    }
+
+}

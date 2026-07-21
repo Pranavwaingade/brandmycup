@@ -150,6 +150,37 @@
 
 /* Buttons */
 
+/* View Details */
+
+.details-btn{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#87947b;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.details-btn:hover{
+
+    background:#6d7a63;
+
+}
 .track-btn,
 .invoice-btn {
 
