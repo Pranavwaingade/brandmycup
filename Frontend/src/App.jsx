@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
+import About from "./Pages/About";
+import Contact from "./Pages/Contact"
+
 import ForgotPassword from "./Pages/ForgotPassword";
 import Products from "./Pages/Products";
 import ProductDetails from "./Pages/ProductDetails";
@@ -47,6 +50,18 @@ function App() {
           path="/register"
           element={<Register />}
         />
+
+        <Route
+          path="/about"
+          element={<About />}
+        />
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+
 
         <Route
           path="/forgotpassword"
