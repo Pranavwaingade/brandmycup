@@ -116,12 +116,60 @@
 }
 
 .hamburger {
-
   display: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: #8d4a23;
 
+  border: none;
+
+  background: transparent;
+
+  font-size: 32px;
+
+  cursor: pointer;
+
+  color: #8d4a23;
+}
+
+/* ===========================
+   Navbar Icon Item
+=========================== */
+
+.nav-icon-item {
+    position: relative;
+}
+
+
+/* ===========================
+   Count Badge
+=========================== */
+
+.nav-count {
+    position: absolute;
+
+    top: -10px;
+
+    right: -12px;
+
+    min-width: 19px;
+
+    height: 19px;
+
+    padding: 2px 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #8d4a23;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
 }
 
 /* Tablet */

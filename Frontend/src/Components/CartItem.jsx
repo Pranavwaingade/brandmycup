@@ -1,106 +1,352 @@
 import React from "react";
 import "../Style/CartItem.css";
 
-const CartItem = () => {
 
-  const cartProducts = [
-    {
-      id: 1,
-      productName: "Tea Paper Cup",
-      description: "Premium paper cup for serving hot tea.",
-      image: "/images/tea-cup.png",
-      size: "150 ml",
-      shape: "Round",
-      paperQuality: "Premium",
-      brandName: "Crafted Cups",
-      tagline: "Taste the Happiness",
-      brandColor: "#8B4513",
-      quantity: 2,
-      totalPrice: 600,
-    },
-    {
-      id: 2,
-      productName: "Coffee Paper Cup",
-      description: "Perfect paper cup for hot coffee.",
-      image: "/images/coffee-cup.png",
-      size: "250 ml",
-      shape: "Ripple",
-      paperQuality: "Premium",
-      brandName: "Coffee House",
-      tagline: "Every Sip Matters",
-      brandColor: "#6F4E37",
-      quantity: 3,
-      totalPrice: 1200,
-    }
-  ];
+const CartItem = ({
+    product,
+    setCartItems
+}) => {
 
-  return (
-    <>
-      {cartProducts.map((product) => (
-        <div className="cart-item" key={product.id}>
 
-          <div className="cart-image">
-            <img src={product.image} alt={product.productName} />
-          </div>
+    // Increase quantity
+    const increaseQuantity = () => {
 
-          <div className="cart-details">
 
-            <h2>{product.productName}</h2>
+        const updatedCart = JSON.parse(
 
-            <p>{product.description}</p>
+            localStorage.getItem("cart")
 
-            <div className="brand-row">
-              <span><b>Brand:</b> {product.brandName}</span>
-              <span><b>Tagline:</b> {product.tagline}</span>
+        ) || [];
+
+
+        const updatedProducts = updatedCart.map(
+
+            (item) => {
+
+
+                if (item.id === product.id) {
+
+
+                    return {
+
+                        ...item,
+
+                        quantity: item.quantity + 1
+
+                    };
+
+                }
+
+
+                return item;
+
+            }
+
+        );
+
+
+        localStorage.setItem(
+
+            "cart",
+
+            JSON.stringify(updatedProducts)
+
+        );
+
+
+        setCartItems(updatedProducts);
+
+
+        window.dispatchEvent(
+
+            new Event("cartUpdated")
+
+        );
+
+    };
+
+
+    // Decrease quantity
+    const decreaseQuantity = () => {
+
+
+        if (product.quantity <= 1) {
+
+            return;
+
+        }
+
+
+        const updatedCart = JSON.parse(
+
+            localStorage.getItem("cart")
+
+        ) || [];
+
+
+        const updatedProducts = updatedCart.map(
+
+            (item) => {
+
+
+                if (item.id === product.id) {
+
+
+                    return {
+
+                        ...item,
+
+                        quantity: item.quantity - 1
+
+                    };
+
+                }
+
+
+                return item;
+
+            }
+
+        );
+
+
+        localStorage.setItem(
+
+            "cart",
+
+            JSON.stringify(updatedProducts)
+
+        );
+
+
+        setCartItems(updatedProducts);
+
+
+        window.dispatchEvent(
+
+            new Event("cartUpdated")
+
+        );
+
+    };
+
+
+    // Remove product
+    const removeProduct = () => {
+
+
+        const updatedCart = JSON.parse(
+
+            localStorage.getItem("cart")
+
+        ) || [];
+
+
+        const updatedProducts = updatedCart.filter(
+
+            (item) => item.id !== product.id
+
+        );
+
+
+        localStorage.setItem(
+
+            "cart",
+
+            JSON.stringify(updatedProducts)
+
+        );
+
+
+        setCartItems(updatedProducts);
+
+
+        window.dispatchEvent(
+
+            new Event("cartUpdated")
+
+        );
+
+    };
+
+
+    // Total price
+    const totalPrice =
+
+        product.price * product.quantity;
+
+
+    return (
+
+        <div className="cart-item">
+
+
+            {/* Product Image */}
+
+            <div className="cart-image">
+
+                <img
+
+                    src={product.image}
+
+                    alt={product.name}
+
+                />
+
             </div>
 
-            <div className="specs">
-              <span>{product.size}</span>
-              <span>{product.shape}</span>
-              <span>{product.paperQuality}</span>
+
+            {/* Product Details */}
+
+            <div className="cart-details">
+
+
+                <h2>
+
+                    {product.name}
+
+                </h2>
+
+
+                <p>
+
+                    {product.description}
+
+                </p>
+
+
+                <div className="brand-row">
+
+                    <span>
+
+                        <b>Category:</b>{" "}
+
+                        {product.category}
+
+                    </span>
+
+                </div>
+
+
+                <div className="specs">
+
+                    <span>
+
+                        {product.size}
+
+                    </span>
+
+
+                    {product.shape && (
+
+                        <span>
+
+                            {product.shape}
+
+                        </span>
+
+                    )}
+
+
+                    {product.paperQuality && (
+
+                        <span>
+
+                            {product.paperQuality}
+
+                        </span>
+
+                    )}
+
+                </div>
+
+
             </div>
 
-            <div className="color-box">
-              <span>Color :</span>
 
-              <div
-                className="circle"
-                style={{ background: product.brandColor }}
-              ></div>
+            {/* Quantity */}
+
+            <div className="quantity-box">
+
+
+                <button
+
+                    onClick={increaseQuantity}
+
+                >
+
+                    +
+
+                </button>
+
+
+                <h3>
+
+                    {product.quantity}
+
+                </h3>
+
+
+                <button
+
+                    onClick={decreaseQuantity}
+
+                >
+
+                    -
+
+                </button>
 
             </div>
 
-          </div>
 
-          <div className="quantity-box">
+            {/* Price */}
 
-            <button>+</button>
+            <div className="price-box">
 
-            <h3>{product.quantity}</h3>
 
-            <button>-</button>
+                <h3>
 
-          </div>
+                    Total
 
-          <div className="price-box">
+                </h3>
 
-            <h3>Total</h3>
 
-            <h2>
-              ₹{product.totalPrice.toLocaleString("en-IN")}
-            </h2>
-          </div>
+                <h2>
 
-          <div className="delete-btn">
+                    ₹
 
-            🗑️ Remove
+                    {totalPrice.toLocaleString(
 
-          </div>
+                        "en-IN"
+
+                    )}
+
+                </h2>
+
+            </div>
+
+
+            {/* Remove */}
+
+            <button
+
+                className="delete-btn"
+
+                onClick={removeProduct}
+
+            >
+
+                🗑️ Remove
+
+            </button>
+
 
         </div>
-      ))}
-    </>
-  );
+
+    );
+
 };
+
 
 export default CartItem;

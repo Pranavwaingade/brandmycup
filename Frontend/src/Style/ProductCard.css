@@ -208,6 +208,110 @@
 }
 
 /* ===========================
+   Wishlist Button
+=========================== */
+
+.product-image {
+    position: relative;
+}
+
+.wishlist-btn {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #8d4a23;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+
+    transition: .3s;
+
+}
+
+.wishlist-btn:hover {
+
+    transform: scale(1.1);
+
+}
+
+.wishlist-btn.active {
+
+    color: #d32f2f;
+
+}
+
+
+/* ===========================
+   Product Actions
+=========================== */
+
+.product-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+/* ===========================
+   Add Cart Button
+=========================== */
+
+.add-cart-btn {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #8d4a23;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #8d4a23;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.add-cart-btn:hover {
+
+    background: #8d4a23;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+/* ===========================
    Mobile
 =========================== */
 
