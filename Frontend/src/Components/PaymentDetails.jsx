@@ -1,64 +1,153 @@
 import React from "react";
 import "../Style/PaymentDetails.css";
 
-const PaymentDetails = () => {
 
-    const payment = {
-        method: "UPI",
-        provider: "Google Pay",
-        transactionId: "TXN20260721001",
-        paymentDate: "21 July 2026",
-        status: "Paid"
-    };
+const PaymentDetails = ({ order }) => {
+
 
     return (
+
         <div className="payment-details">
+
 
             <div className="payment-header">
 
+
                 <span className="payment-icon">
+
                     💳
+
                 </span>
 
-                <h2>Payment Details</h2>
+
+                <h2>
+
+                    Payment Details
+
+                </h2>
+
 
             </div>
 
+
             <div className="payment-content">
 
-                <div className="payment-row">
-                    <span>Payment Method</span>
-                    <strong>{payment.method}</strong>
-                </div>
+
+                {/* Payment Method */}
 
                 <div className="payment-row">
-                    <span>Payment Provider</span>
-                    <strong>{payment.provider}</strong>
-                </div>
 
-                <div className="payment-row">
-                    <span>Transaction ID</span>
-                    <strong>{payment.transactionId}</strong>
-                </div>
+                    <span>
 
-                <div className="payment-row">
-                    <span>Payment Date</span>
-                    <strong>{payment.paymentDate}</strong>
-                </div>
+                        Payment Method
 
-                <div className="payment-row">
-                    <span>Payment Status</span>
+                    </span>
 
-                    <strong className="payment-status">
-                        <span className="payment-status-dot"></span>
-                        {payment.status}
+
+                    <strong>
+
+                        {order.paymentMethod}
+
                     </strong>
+
                 </div>
+
+
+                {/* Payment Status */}
+
+                <div className="payment-row">
+
+
+                    <span>
+
+                        Payment Status
+
+                    </span>
+
+
+                    <strong
+
+                        className="payment-status"
+
+                    >
+
+                        <span
+
+                            className="payment-status-dot"
+
+                        ></span>
+
+
+                        {order.paymentMethod ===
+
+                            "Cash On Delivery"
+
+                            ? "Pending"
+
+                            : "Paid"
+
+                        }
+
+                    </strong>
+
+                </div>
+
+
+                {/* Payment Date */}
+
+                <div className="payment-row">
+
+                    <span>
+
+                        Order Date
+
+                    </span>
+
+
+                    <strong>
+
+                        {order.orderDate}
+
+                    </strong>
+
+                </div>
+
+
+                {/* Transaction */}
+
+                <div className="payment-row">
+
+                    <span>
+
+                        Transaction ID
+
+                    </span>
+
+
+                    <strong>
+
+                        {order.paymentMethod ===
+
+                            "Cash On Delivery"
+
+                            ? "Not Available"
+
+                            : order.id
+
+                        }
+
+                    </strong>
+
+                </div>
+
 
             </div>
 
         </div>
+
     );
+
 };
+
 
 export default PaymentDetails;

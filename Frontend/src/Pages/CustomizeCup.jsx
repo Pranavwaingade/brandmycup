@@ -22,7 +22,7 @@ const CustomizeCup = () => {
     const [paperQuality, setPaperQuality] = useState("Standard");
     const [quantity, setQuantity] = useState("100");
 
-    
+
     return (
 
         <>
@@ -41,7 +41,14 @@ const CustomizeCup = () => {
                         <UploadLogo setlogo={setlogo} />
                         <CupSpecifications setCupSize={setCupSize} setCupShape={setCupShape} setPaperQuality={setPaperQuality} setQuantity={setQuantity} cupSize={cupSize} cupShape={cupShape} quantity={quantity} paperQuality={paperQuality} />
                         <OrderSummary cupSize={cupSize} cupShape={cupShape} quantity={quantity} paperQuality={paperQuality} />
-                        <DesignActions />
+                        <DesignActions brandname={brandname}
+                            tagline={tagline}
+                            brandcolor={brandcolor}
+                            logo={logo}
+                            cupSize={cupSize}
+                            cupShape={cupShape}
+                            paperQuality={paperQuality}
+                            quantity={quantity} />
                     </div>
                 </div>
 

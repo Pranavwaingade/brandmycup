@@ -1,0 +1,61 @@
+.checkout-address {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 99%;
+
+    gap: 12px;
+
+}
+
+
+.checkout-address h2 {
+
+    color: #8d4a23;
+
+    margin-bottom: 8px;
+
+}
+
+
+.checkout-address input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+
+.checkout-address input:focus {
+
+    border-color: #8d4a23;
+
+    box-shadow: 0 0 5px rgba(141, 74, 35, 0.2);
+
+}
+
+
+.checkout-address hr {
+
+    width: 100%;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-top: 1px solid #ddd;
+
+}

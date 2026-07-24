@@ -1,91 +1,212 @@
 import React from "react";
 import "../Style/OrderSummaryCard.css";
 
-const OrderSummaryCard = () => {
 
-    const orderSummary = {
-        subtotal: 1800,
-        discount: 200,
-        delivery: 0,
-        gst: 288
-    };
+const OrderSummaryCard = ({ order }) => {
 
-    const total =
-        orderSummary.subtotal -
-        orderSummary.discount +
-        orderSummary.gst +
-        orderSummary.delivery;
 
     return (
+
         <div className="order-summary-card">
+
 
             <div className="order-summary-header">
 
-                <h2>🧾 Order Summary</h2>
+
+                <h2>
+
+                    🧾 Order Summary
+
+                </h2>
+
 
             </div>
+
 
             <div className="summary-details">
 
-                <div className="summary-row">
-                    <span>Subtotal</span>
-                    <strong>
-                        ₹ {orderSummary.subtotal}
-                    </strong>
-                </div>
 
-                <div className="summary-row discount-row">
-                    <span>Discount</span>
-                    <strong>
-                        - ₹ {orderSummary.discount}
-                    </strong>
-                </div>
+                {/* Subtotal */}
 
                 <div className="summary-row">
-                    <span>Delivery Charges</span>
+
+
+                    <span>
+
+                        Subtotal
+
+                    </span>
+
+
+                    <strong>
+
+                        ₹{" "}
+
+                        {order.subtotal.toLocaleString(
+
+                            "en-IN"
+
+                        )}
+
+                    </strong>
+
+
+                </div>
+
+
+                {/* Discount */}
+
+                <div
+
+                    className=
+
+                        "summary-row discount-row"
+
+                >
+
+
+                    <span>
+
+                        Discount
+
+                    </span>
+
+
+                    <strong>
+
+                        - ₹{" "}
+
+                        {order.discount.toLocaleString(
+
+                            "en-IN"
+
+                        )}
+
+                    </strong>
+
+
+                </div>
+
+
+                {/* Delivery */}
+
+                <div className="summary-row">
+
+
+                    <span>
+
+                        Delivery Charges
+
+                    </span>
+
 
                     <strong className="free">
-                        {orderSummary.delivery === 0
+
+
+                        {order.delivery === 0
+
                             ? "FREE"
-                            : `₹ ${orderSummary.delivery}`
+
+                            : `₹ ${order.delivery}`
+
                         }
+
+
                     </strong>
+
+
                 </div>
+
+
+                {/* GST */}
 
                 <div className="summary-row">
-                    <span>GST (18%)</span>
+
+
+                    <span>
+
+                        GST (18%)
+
+                    </span>
+
 
                     <strong>
-                        ₹ {orderSummary.gst}
+
+                        ₹{" "}
+
+                        {order.gst.toFixed(2)}
+
                     </strong>
+
+
                 </div>
 
+
             </div>
+
 
             <hr />
 
+
+            {/* Final Total */}
+
             <div className="final-total">
 
-                <h3>Total Amount</h3>
+
+                <h3>
+
+                    Total Amount
+
+                </h3>
+
 
                 <h2>
-                    ₹ {total}
+
+
+                    ₹{" "}
+
+                    {order.total.toFixed(2)}
+
+
                 </h2>
 
+
             </div>
+
+
+            {/* Payment Status */}
 
             <div className="payment-status">
 
+
                 <span className="status-dot"></span>
 
+
                 <span>
-                    Payment Completed
+
+
+                    {order.paymentMethod ===
+
+                        "Cash On Delivery"
+
+                        ? "Payment Pending"
+
+                        : "Payment Completed"
+
+                    }
+
+
                 </span>
+
 
             </div>
 
+
         </div>
+
     );
+
 };
+
 
 export default OrderSummaryCard;
