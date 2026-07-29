@@ -26,14 +26,27 @@ app.get("/", (req, res) => {
 
 });
 
-
 // Server
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+const authRoutes = require("./routes/authRoutes");
 
+app.use(
+    "/api/auth",
+    authRoutes
+);
+
+app.use("/api/auth", authRoutes);
+
+const userRoutes = require("./routes/userRoutes");
+
+app.use(
+    "/api/users",
+    userRoutes
+);
+
+app.listen(PORT, () => {
     console.log(
         `Server running on port ${PORT} 🚀`
     );
-
 });

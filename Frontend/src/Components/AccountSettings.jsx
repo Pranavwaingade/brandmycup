@@ -19,7 +19,17 @@ const AccountSettings = () => {
     };
 
     const handleLogout = () => {
-        alert("Logout feature will be connected with authentication.");
+
+        localStorage.removeItem("token");
+
+        localStorage.removeItem("user");
+
+        window.dispatchEvent(
+            new Event("authChanged")
+        );
+
+        navigate("/login");
+
     };
 
     return (

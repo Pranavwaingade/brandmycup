@@ -1,86 +1,170 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, {
+  useEffect,
+  useState
+} from "react";
+
+import {
+  Link,
+  useNavigate
+} from "react-router-dom";
 
 import "../Style/Navbar.css";
+
 import mylogo from "../img/Cups(2).png";
 
 
 const Navbar = () => {
 
 
-  // Temporary login status
-  const isLoggedIn = true;
+  const navigate = useNavigate();
 
 
-  // Mobile menu state
-  const [menuOpen, setMenuOpen] = useState(false);
+  // =========================
+  // LOGIN STATUS
+  // =========================
+
+  const [
+    isLoggedIn,
+    setIsLoggedIn
+  ] = useState(
+
+    Boolean(
+      localStorage.getItem("token")
+    )
+
+  );
 
 
-  // Cart and Wishlist counts
-  const [cartCount, setCartCount] = useState(0);
+  // =========================
+  // MOBILE MENU
+  // =========================
 
-  const [wishlistCount, setWishlistCount] = useState(0);
+  const [
+    menuOpen,
+    setMenuOpen
+  ] = useState(false);
 
 
-  // Update cart and wishlist counts
+  // =========================
+  // CART & WISHLIST COUNT
+  // =========================
+
+  const [
+    cartCount,
+    setCartCount
+  ] = useState(0);
+
+
+  const [
+    wishlistCount,
+    setWishlistCount
+  ] = useState(0);
+
+
+  // =========================
+  // UPDATE CART & WISHLIST
+  // =========================
+
   const updateCounts = () => {
 
 
-    // Get cart data from localStorage
     const cart =
+
       JSON.parse(
-        localStorage.getItem("cart")
+
+        localStorage.getItem(
+          "cart"
+        )
+
       ) || [];
 
 
-    // Get wishlist data from localStorage
     const wishlist =
+
       JSON.parse(
-        localStorage.getItem("wishlist")
+
+        localStorage.getItem(
+          "wishlist"
+        )
+
       ) || [];
 
 
-    // Calculate total cart quantity
-    const totalCartItems = cart.reduce(
+    const totalCartItems =
 
-      (total, item) => {
+      cart.reduce(
 
-        return total + item.quantity;
+        (total, item) => {
 
-      },
+          return (
 
-      0
+            total +
+            item.quantity
 
+          );
+
+        },
+
+        0
+
+      );
+
+
+    setCartCount(
+      totalCartItems
     );
 
 
-    // Update state
-    setCartCount(totalCartItems);
-
-    setWishlistCount(wishlist.length);
+    setWishlistCount(
+      wishlist.length
+    );
 
   };
 
 
-  /*
-      useEffect runs when Navbar loads.
 
-      It also listens for:
 
-      cartUpdated
-      wishlistUpdated
-
-      events.
-  */
+  // =========================
+  // USE EFFECT
+  // =========================
 
   useEffect(() => {
 
 
-    // Initial count update
+    // Initial counts
     updateCounts();
 
 
-    // Listen for cart changes
+    // Login / Logout Event
+    const handleAuthChange = () => {
+
+
+      setIsLoggedIn(
+
+        Boolean(
+
+          localStorage.getItem(
+            "token"
+          )
+
+        )
+
+      );
+
+    };
+
+
+    // Listen Auth Changes
+    window.addEventListener(
+
+      "authChanged",
+
+      handleAuthChange
+
+    );
+
+
+    // Listen Cart Changes
     window.addEventListener(
 
       "cartUpdated",
@@ -90,7 +174,7 @@ const Navbar = () => {
     );
 
 
-    // Listen for wishlist changes
+    // Listen Wishlist Changes
     window.addEventListener(
 
       "wishlistUpdated",
@@ -102,6 +186,15 @@ const Navbar = () => {
 
     // Cleanup
     return () => {
+
+
+      window.removeEventListener(
+
+        "authChanged",
+
+        handleAuthChange
+
+      );
 
 
       window.removeEventListener(
@@ -127,10 +220,15 @@ const Navbar = () => {
   }, []);
 
 
-  // Close mobile menu
+  // =========================
+  // CLOSE MENU
+  // =========================
+
   const closeMenu = () => {
 
-    setMenuOpen(false);
+    setMenuOpen(
+      false
+    );
 
   };
 
@@ -140,9 +238,9 @@ const Navbar = () => {
     <nav className="navbar">
 
 
-      {/* ===========================
-                Logo
-            =========================== */}
+      {/* =====================
+          LOGO
+      ====================== */}
 
       <Link
 
@@ -168,16 +266,11 @@ const Navbar = () => {
         <div className="logo-text">
 
           <h2 className="cups">
-
             Cups
-
           </h2>
 
-
           <h2 className="craft">
-
             Craft
-
           </h2>
 
         </div>
@@ -185,32 +278,38 @@ const Navbar = () => {
       </Link>
 
 
-      {/* ===========================
-                Hamburger Menu
-            =========================== */}
+      {/* =====================
+          HAMBURGER
+      ====================== */}
 
       <button
 
         className="hamburger"
 
-        onClick={() => {
+        onClick={() =>
 
-          setMenuOpen(!menuOpen);
+          setMenuOpen(
+            !menuOpen
+          )
 
-        }}
+        }
 
         aria-label="Toggle Menu"
 
       >
 
-        {menuOpen ? "✕" : "☰"}
+        {menuOpen
+          ? "✕"
+          : "☰"
+
+        }
 
       </button>
 
 
-      {/* ===========================
-                Navigation Menu
-            =========================== */}
+      {/* =====================
+          NAV MENU
+      ====================== */}
 
       <div
 
@@ -227,14 +326,14 @@ const Navbar = () => {
       >
 
 
-        {/* ===========================
-                    Main Navigation Links
-                =========================== */}
+        {/* =====================
+            MAIN LINKS
+        ====================== */}
 
         <ul className="nav-links">
 
 
-          {/* Home */}
+          {/* HOME */}
 
           <li>
 
@@ -253,7 +352,7 @@ const Navbar = () => {
           </li>
 
 
-          {/* Products */}
+          {/* PRODUCTS */}
 
           {isLoggedIn && (
 
@@ -276,7 +375,7 @@ const Navbar = () => {
           )}
 
 
-          {/* Customize */}
+          {/* CUSTOMIZE */}
 
           {isLoggedIn && (
 
@@ -299,7 +398,7 @@ const Navbar = () => {
           )}
 
 
-          {/* About */}
+          {/* ABOUT */}
 
           <li>
 
@@ -318,7 +417,7 @@ const Navbar = () => {
           </li>
 
 
-          {/* Contact */}
+          {/* CONTACT */}
 
           <li>
 
@@ -337,7 +436,7 @@ const Navbar = () => {
           </li>
 
 
-          {/* Login */}
+          {/* LOGIN */}
 
           {!isLoggedIn && (
 
@@ -362,14 +461,14 @@ const Navbar = () => {
         </ul>
 
 
-        {/* ===========================
-                    Right Side Icons
-                =========================== */}
+        {/* =====================
+            RIGHT SIDE
+        ====================== */}
 
         <ul className="nav-auth">
 
 
-          {/* Profile */}
+          {/* PROFILE */}
 
           {isLoggedIn && (
 
@@ -394,7 +493,7 @@ const Navbar = () => {
           )}
 
 
-          {/* Cart */}
+          {/* CART */}
 
           <li className="nav-icon-item">
 
@@ -426,7 +525,7 @@ const Navbar = () => {
           </li>
 
 
-          {/* Wishlist */}
+          {/* WISHLIST */}
 
           <li className="nav-icon-item">
 
@@ -456,6 +555,7 @@ const Navbar = () => {
             </Link>
 
           </li>
+
 
         </ul>
 

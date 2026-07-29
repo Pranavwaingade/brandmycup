@@ -20,6 +20,8 @@ import OrderSuccess from "./Pages/OrderSuccess";
 import MyOrders from "./Pages/MyOrders";
 import OrderDetails from "./Pages/OrderDetails";
 
+import ProtectedRoute from "./Components/ProtectedRoute";
+
 import Profile from "./Pages/Profile";
 
 
@@ -73,7 +75,7 @@ function App() {
 
         <Route
           path="/products"
-          element={<Products />}
+          element={<ProductDetails><Products /></ProductDetails>}
         />
 
         <Route
@@ -86,7 +88,7 @@ function App() {
 
         <Route
           path="/customizeCup"
-          element={<CustomizeCup />}
+          element={<ProductDetails><CustomizeCup /></ProductDetails>}
         />
 
 
